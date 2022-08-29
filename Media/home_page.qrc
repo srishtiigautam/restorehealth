@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>Nutrition_1.jpeg</file>
+    <file>Nutrition_2.jpeg</file>
+    <file>Nutrition_3.jpeg</file>
+    <file>Nutrition_4.jpeg</file>
+    <file>healh_fitness.jpeg</file>
+    <file>Sleep.jpeg</file>
+    <file>Mental_health.jpeg</file>
+    <file>Nutrition.jpeg</file>
+    <file>Wix Logo Maker - Google Chrome 26-08-2022 16_51_23.png</file>
+    <file>notification (1).png</file>
+    <file>notification (2).png</file>
+    <file>notification.png</file>
+  </qresource>
+</RCC>
