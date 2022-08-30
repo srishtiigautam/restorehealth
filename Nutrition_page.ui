@@ -544,7 +544,7 @@ weight, degree of activity and rate of growth.
                  <item>
                   <widget class="QFrame" name="frame_17">
                    <property name="styleSheet">
-                    <string notr="true">image: url(:/icons/Nutrition_1.jpeg);</string>
+                    <string notr="true">image: url(Media/Nutrition_1.jpeg);</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -625,7 +625,7 @@ maternal tissue.</string>
                  <item>
                   <widget class="QFrame" name="frame_20">
                    <property name="styleSheet">
-                    <string notr="true">image: url(:/icons/Nutrition_2.jpeg);</string>
+                    <string notr="true">image: url(Media/Nutrition_2.jpeg);</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -797,7 +797,7 @@ Avoid tea/coffee after a meal.</string>
                  <item>
                   <widget class="QFrame" name="frame_21">
                    <property name="styleSheet">
-                    <string notr="true">image: url(:/icons/Nutrition_3.jpeg);</string>
+                    <string notr="true">image: url(Media/Nutrition_3.jpeg);</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -900,7 +900,7 @@ One should use iodized salt daily in the diet to prevent IDD</string>
                  <item>
                   <widget class="QFrame" name="frame_23">
                    <property name="styleSheet">
-                    <string notr="true">image: url(:/icons/Nutrition_4.jpeg);</string>
+                    <string notr="true">image: url(Media/Nutrition_4.jpeg);</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
