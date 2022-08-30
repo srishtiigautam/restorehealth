@@ -382,7 +382,7 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_9">
+           <widget class="QPushButton" name="Contact_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
