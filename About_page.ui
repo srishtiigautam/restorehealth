@@ -106,7 +106,17 @@ border:None;</string>
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">image: url(Media/notification (2).png);</string>
+              <string notr="true">QPushButton{
+image: url(Media/notification (2).png);
+}
+
+QPushButton:hover{
+	image: url(Media/notification.png);
+}
+
+QPushButton:pressed{
+	image: url(Media/notification (1).png);
+}</string>
              </property>
              <property name="text">
               <string/>

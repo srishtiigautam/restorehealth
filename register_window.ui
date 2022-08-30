@@ -542,8 +542,16 @@ hr { height: 1px; border-width: 0; }
                             <cursorShape>IBeamCursor</cursorShape>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background-color: rgb(138, 174, 146);
-border-color: rgb(0, 0, 0);</string>
+                            <string notr="true">QTextEdit{
+background-color: rgb(138, 174, 146);
+color: rgb(255, 255, 255);
+}
+
+QTextEdit:focus{
+	background-color:rgb(204, 236, 211);
+	border: 2px solid black;
+	color: rgb(0, 0, 0);
+}</string>
                            </property>
                            <property name="frameShape">
                             <enum>QFrame::Box</enum>
@@ -616,8 +624,16 @@ hr { height: 1px; border-width: 0; }
                             <cursorShape>IBeamCursor</cursorShape>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background-color: rgb(138, 174, 146);
-border-color: rgb(0, 0, 0);</string>
+                            <string notr="true">QTextEdit{
+background-color: rgb(138, 174, 146);
+color: rgb(255, 255, 255);
+}
+
+QTextEdit:focus{
+	background-color:rgb(204, 236, 211);
+	border: 2px solid black;
+	color: rgb(0, 0, 0);
+}</string>
                            </property>
                            <property name="frameShape">
                             <enum>QFrame::Box</enum>
@@ -696,8 +712,16 @@ hr { height: 1px; border-width: 0; }
                             <cursorShape>IBeamCursor</cursorShape>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">background-color: rgb(138, 174, 146);
-border-color: rgb(0, 0, 0);</string>
+                            <string notr="true">QTextEdit{
+background-color: rgb(138, 174, 146);
+color: rgb(255, 255, 255);
+}
+
+QTextEdit:focus{
+	background-color:rgb(204, 236, 211);
+	border: 2px solid black;
+	color: rgb(0, 0, 0);
+}</string>
                            </property>
                            <property name="frameShape">
                             <enum>QFrame::Box</enum>
@@ -744,8 +768,20 @@ border-color: rgb(0, 0, 0);</string>
                          </font>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">background-color: rgb(204, 236, 211);
-border-radius:15px;</string>
+                         <string notr="true">QPushButton{
+background-color: rgb(204, 236, 211);
+border-radius:15px;
+}
+
+QPushButton:hover {
+background-color: rgb(138, 174, 146);
+color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+background-color: rgb(255, 255, 255);
+color: rgb(97, 97, 97);
+}</string>
                         </property>
                         <property name="text">
                          <string>Register</string>

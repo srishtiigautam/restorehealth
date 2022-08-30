@@ -115,7 +115,7 @@ border:None;</string>
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
-              <string notr="true">image: url(Media/notification (2).png);QPushButton{
+              <string notr="true">QPushButton{
 image: url(Media/notification (2).png);
 }
 

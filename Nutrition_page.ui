@@ -110,15 +110,15 @@ border:None;</string>
              </property>
              <property name="styleSheet">
               <string notr="true">QPushButton{
-image: url(:/icons/notification (2).png);
+image: url(Media/notification (2).png);
 }
 
 QPushButton:hover{
-	image: url(:/icons/notification.png);
+	image: url(Media/notification.png);
 }
 
 QPushButton:pressed{
-	image: url(:/icons/notification (1).png);
+	image: url(Media/notification (1).png);
 }</string>
              </property>
              <property name="text">
