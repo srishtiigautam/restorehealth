@@ -10,10 +10,12 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QPushButton, QFra
 # screen5 -> Nutrition_page
 # screen6 -> Patient_info_page
 # screen7 -> Contact_page
+# screen8 -> Mental_health_page
 
 #button1 -> Register
 #button2 -> About
 #button10 -> Nutrition
+#button29 -> Mental_health
 #button19 -> Contact
 
 class HomeWindow(QMainWindow):
@@ -32,7 +34,9 @@ class HomeWindow(QMainWindow):
 
         self.button19 = self.findChild(QPushButton,"Contact_button")
         self.button19.clicked.connect(self.contact_call)
-        
+
+        self.button19 = self.findChild(QPushButton,"Mental_health_button")
+        self.button19.clicked.connect(self.mental_health_call)
     def register_call(self):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
@@ -47,10 +51,15 @@ class HomeWindow(QMainWindow):
         screen5 = NutritionWindow()
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def mental_health_call(self):
+        screen8 = Mental_health_window()
+        widget.addWidget(screen8)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
     def contact_call(self):
-        screen5 = ContactWindow()
-        widget.addWidget(screen5)
+        screen7 = ContactWindow()
+        widget.addWidget(screen7)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
 #button3 -> Home
@@ -246,7 +255,7 @@ class ContactWindow(QMainWindow):
 
         self.button18 = self.findChild(QPushButton,"About_Button")
         self.button18.clicked.connect(self.about_call)
-
+        
     def home_call(self):
         screen1 = HomeWindow()
         widget.addWidget(screen1)
@@ -256,6 +265,47 @@ class ContactWindow(QMainWindow):
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
+#button22 ->home
+#button23 ->about
+#button24 ->analytics
+#button25 ->consult
+#button26 ->support
+#button27 ->Contact
+#button28 ->register
+
+class Mental_health_window(QMainWindow):
+    def __init__(self):
+        super(Mental_health_window, self).__init__()
+        uic.loadUi("./Mental_Health.ui", self)
+
+        self.button22 = self.findChild(QPushButton,"Home_Button")
+        self.button22.clicked.connect(self.home_call)
+
+        self.button23 = self.findChild(QPushButton,"About_Button")
+        self.button23.clicked.connect(self.about_call)
+
+        self.button27 = self.findChild(QPushButton, "Contact_button")
+        self.button27.clicked.connect(self.contact_call)
+
+        self.button28 = self.findChild(QPushButton, "Register_button")
+        self.button28.clicked.connect(self.register_call)
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def contact_call(self):
+        screen5 = ContactWindow()
+        widget.addWidget(screen5)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def register_call(self):
+        screen2 = RegisterWindow()
+        widget.addWidget(screen2)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
 app = QApplication(sys.argv)
 widget = QStackedWidget()
 mainwindow = HomeWindow()
