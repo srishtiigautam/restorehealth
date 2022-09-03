@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Fitness_1.jpeg</file>
+    <file>Fitness_2.jpeg</file>
+    <file>Fitness_3.jpeg</file>
     <file>Mental_health_1.jpeg</file>
     <file>Mental_health_2.jpeg</file>
     <file>Mental_health_3.jpeg</file>
