@@ -12,31 +12,41 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QPushButton, QFra
 # screen7 -> Contact_page
 # screen8 -> Mental_health_page
 
+#------------------------------------------
+#             HOME PAGE
+#------------------------------------------
 #button1 -> Register
 #button2 -> About
-#button10 -> Nutrition
-#button29 -> Mental_health
-#button19 -> Contact
-
+#button3 -> Analytics
+#button4 -> Consult
+#button5 -> Support
+#button6 -> Contact
+#button7 -> Nutrition
+#button8 -> Mental Health
+#button9 -> Sleep
+#button10 -> Health & Fitness
+#button11 -> Notification
+#button12 -> 
+#----------------------------------------
 class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow,self).__init__()
         uic.loadUi("./home_window.ui",self)
 
-        self.button = self.findChild(QPushButton, "Register_Button")
-        self.button.clicked.connect(self.register_call)
+        self.button1 = self.findChild(QPushButton, "Register_Button")
+        self.button1.clicked.connect(self.register_call)
 
         self.button2 = self.findChild(QPushButton, "About_button")
         self.button2.clicked.connect(self.about_call)
         
-        self.button10 = self.findChild(QPushButton,"Nutrition_button")
-        self.button10.clicked.connect(self.nutrition_call)
+        self.button7 = self.findChild(QPushButton,"Nutrition_button")
+        self.button7.clicked.connect(self.nutrition_call)
 
-        self.button19 = self.findChild(QPushButton,"Contact_button")
-        self.button19.clicked.connect(self.contact_call)
+        self.button6 = self.findChild(QPushButton,"Contact_button")
+        self.button6.clicked.connect(self.contact_call)
 
-        self.button19 = self.findChild(QPushButton,"Mental_health_button")
-        self.button19.clicked.connect(self.mental_health_call)
+        self.button8 = self.findChild(QPushButton,"Mental_health_button")
+        self.button8.clicked.connect(self.mental_health_call)
     def register_call(self):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
@@ -62,23 +72,32 @@ class HomeWindow(QMainWindow):
         widget.addWidget(screen7)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-#button3 -> Home
-#button  -> login
-#button21 -> Contact
+#----------------------------------------
+#             ABOUT PAGE
+#----------------------------------------
+#button13 -> Home
+#button14  -> Analytics
+#button15 -> Consult
+#button16 -> Support
+#button17 -> Contact
+#button18 -> Login
+#button19 -> Notification
+#----------------------------------------
 class AboutWindow(QMainWindow):
     def __init__(self):
         super(AboutWindow, self).__init__()
         uic.loadUi("./About_page.ui",self)
 
-        self.button3 = self.findChild(QPushButton, "Home_button")
-        self.button3.clicked.connect(self.home_call)
+        self.button13 = self.findChild(QPushButton, "Home_button")
+        self.button13.clicked.connect(self.home_call)
 
-        self.button4 = self.findChild(QPushButton, "Login_Button")
-        self.button4.clicked.connect(self.login_call)
+        self.button17 = self.findChild(QPushButton,"Contact_button")
+        self.button17.clicked.connect(self.contact_call)
 
-        self.button21 = self.findChild(QPushButton,"Contact_button")
-        self.button21.clicked.connect(self.contact_call)
+        self.button18 = self.findChild(QPushButton, "Login_Button")
+        self.button18.clicked.connect(self.login_call)
 
+        
     def login_call(self):
         screen4 = LoginWindow()
         widget.addWidget(screen4)
@@ -94,22 +113,32 @@ class AboutWindow(QMainWindow):
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-#button5 -> home
-#button6 -> about
-#button20 -> contact
+#---------------------------------------------
+#               REGISTER WINDOW
+#---------------------------------------------
+#button21 -> home
+#button22 -> about
+#button23 -> analytics
+#button24 -> consult
+#button25 -> support
+#button26 -> contact
+#button27 -> register-button
+#button28 -> login
+#button29 -> notification
+#---------------------------------------------
 class RegisterWindow(QMainWindow):
     def __init__(self):
         super(RegisterWindow, self).__init__()
         uic.loadUi("./register_window.ui", self)
 
-        self.button5 = self.findChild(QPushButton,"Home_button")
-        self.button5.clicked.connect(self.home_call)
+        self.button21 = self.findChild(QPushButton,"Home_button")
+        self.button21.clicked.connect(self.home_call)
 
-        self.button6 = self.findChild(QPushButton, "About_button")
-        self.button6.clicked.connect(self.about_call)
+        self.button22 = self.findChild(QPushButton, "About_button")
+        self.button22.clicked.connect(self.about_call)
 
-        self.button20 = self.findChild(QPushButton,"Contact_button")
-        self.button20.clicked.connect(self.contact_call)
+        self.button26 = self.findChild(QPushButton,"Contact_button")
+        self.button26.clicked.connect(self.contact_call)
 
     def home_call(self):
         screen1 = HomeWindow()
@@ -126,11 +155,19 @@ class RegisterWindow(QMainWindow):
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-#button7 -> home
-#button8 -> about
-#button9 -> register
-#button18 -> patient_info
-#button19 -> contact
+#---------------------------------------------
+#               LOGIN WINDOW
+#---------------------------------------------
+#button31 -> home
+#button32 -> about
+#button33 -> analytics
+#button34 -> consult
+#button35 -> support
+#button36 -> contact
+#button37 -> login-button
+#button38 -> register
+#button39 -> notification
+#----------------------------------------------
 class LoginWindow(QMainWindow):
     def __init__(self):
         super(LoginWindow, self).__init__()
