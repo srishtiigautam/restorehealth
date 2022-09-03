@@ -1,11 +1,15 @@
 FITNESS
 ----------------------------------------------------
-Physical fitness is a state of health and well-being and, more specifically, the ability to perform aspects of sports, occupations and daily activities. 
-Physical fitness is generally achieved through proper nutrition, moderate-vigorous physical exercise,and sufficient rest along with a formal recovery plan.
+Physical fitness is a state of health and well-being and, more specifically, 
+the ability to perform aspects of sports, occupations and daily activities. 
+Physical fitness is generally achieved through proper nutrition, 
+moderate-vigorous physical exercise,and sufficient rest along with a formal recovery plan.
 
 
-Regular physical activity is proven to help prevent and manage noncommunicable diseases such as heart disease, stroke, diabetes and several cancers. 
-It also helps prevent hypertension, maintain healthy body weight and can improve mental health, quality of life and well-being. 
+Regular physical activity is proven to help prevent and manage noncommunicable 
+diseases such as heart disease, stroke, diabetes and several cancers. 
+It also helps prevent hypertension, maintain healthy body weight and 
+can improve mental health, quality of life and well-being. 
 
 
 
@@ -16,13 +20,9 @@ Physical activity has significant health benefits for hearts, bodies and minds
 
 Physical activity contributes to preventing and managing non communicable diseases such as cardiovascular diseases, cancer and diabetes.
 
-
-
 Physical activity reduces symptoms of depression and anxiety
 
 Physical activity enhances thinking, learning, and judgment skills
-
-
 
 Physical activity ensures healthy growth and development in young people
 
@@ -33,8 +33,6 @@ Physical activity improves overall well-being
 Globally, 1 in 4 adults do not meet the global recommended levels of physical activity
 
 Up to 5 million deaths a year could be averted if the global population was more active
-
-
 
 People who are insufficiently active have a 20% to 30% increased risk of death compared to people who are sufficiently active.
 
