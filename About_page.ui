@@ -185,6 +185,12 @@ background-color: rgb(138, 174, 146);</string>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QFrame" name="frame_3">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>100</width>
@@ -248,18 +254,10 @@ background-color: rgb(220, 255, 228);
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-color: rgb(97, 97, 97);
-border-radius:10px;
-}
-
-QPushButton:hover{
-background-color: rgb(220, 255, 228);
-	/*color: rgb(255, 255, 255);*/
-	font: 700 16pt &quot;Constantia&quot;;
-}
-
-
-</string>
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
+}</string>
             </property>
             <property name="text">
              <string>About</string>
