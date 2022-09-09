@@ -1,6 +1,7 @@
 import os
 import sys
 from PyQt5 import QtWidgets,uic
+from PyQt5 import QtGui
 from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QPushButton, QFrame, QStackedWidget, QVBoxLayout, QWidget, QFileDialog, QGridLayout
 
 # screen1 -> home window
@@ -11,6 +12,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QPushButton, QFra
 # screen6 -> Patient_info_page
 # screen7 -> Contact_page
 # screen8 -> Mental_health_page
+# screen9 -> Consult_page
 
 #------------------------------------------
 #             HOME PAGE
@@ -38,6 +40,9 @@ class HomeWindow(QMainWindow):
 
         self.button2 = self.findChild(QPushButton, "About_button")
         self.button2.clicked.connect(self.about_call)
+
+        self.button4 = self.findChild(QPushButton, "Consult_button")
+        self.button4.clicked.connect(self.consult_call)
         
         self.button7 = self.findChild(QPushButton,"Nutrition_button")
         self.button7.clicked.connect(self.nutrition_call)
@@ -55,6 +60,11 @@ class HomeWindow(QMainWindow):
     def about_call(self):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def consult_call(self):
+        screen9 = ConsultWindow()
+        widget.addWidget(screen9)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def nutrition_call(self):
@@ -211,6 +221,47 @@ class LoginWindow(QMainWindow):
         widget.addWidget(screen6)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
+#---------------------------------------------
+#               CONSULT WINDOW
+#---------------------------------------------
+# button41 -> home_button
+# button42 -> about_button
+# button43 -> analytics_button
+# button44 -> support_button
+# button45 -> contact_button
+# button46 -> yes_button
+# button47 -> no_button
+# button48 ->
+# button49 ->
+#---------------------------------------------
+class ConsultWindow(QMainWindow):
+    def __init__(self):
+        super(ConsultWindow, self).__init__()
+        uic.loadUi("./Consult_page.ui", self)
+
+        self.button41 = self.findChild(QPushButton,"Home_Button")
+        self.button41.clicked.connect(self.home_call)
+        
+        self.button42 = self.findChild(QPushButton, "About_Button")
+        self.button42.clicked.connect(self.about_call)
+
+        self.button45 = self.findChild(QPushButton, "Contact_Button")
+        self.button45.clicked.connect(self.contact_call)
+
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def contact_call(self):
+        screen5 = ContactWindow()
+        widget.addWidget(screen5)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 #button11 -> home
 #button12 -> about
@@ -347,6 +398,8 @@ app = QApplication(sys.argv)
 widget = QStackedWidget()
 mainwindow = HomeWindow()
 widget.addWidget(mainwindow)
+widget.setWindowTitle("restore_health")
+widget.setWindowIcon(QtGui.QIcon("./Media/icon.png"))
 widget.show()
 try:
     sys.exit(app.exec_())
