@@ -235,14 +235,9 @@ border-radius:15px;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-color: rgb(97, 97, 97);
-border-radius:10px;
-}
-
-QPushButton:hover{
-background-color: rgb(220, 255, 228);
-	/*color: rgb(255, 255, 255);*/
-	font: 700 16pt &quot;Constantia&quot;;
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
 }
 
 
@@ -276,6 +271,12 @@ background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
 }
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
+}
+
 
 
 </string>
@@ -286,7 +287,7 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="Analytics_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -307,6 +308,12 @@ QPushButton:hover{
 background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
+}
+
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
 }
 
 
@@ -318,7 +325,7 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_7">
+           <widget class="QPushButton" name="Consult_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -339,6 +346,12 @@ QPushButton:hover{
 background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
+}
+
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
 }
 
 
@@ -350,7 +363,7 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="Support_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -371,6 +384,12 @@ QPushButton:hover{
 background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
+}
+
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
 }
 
 
@@ -403,6 +422,12 @@ QPushButton:hover{
 background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
+}
+
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
 }
 
 
