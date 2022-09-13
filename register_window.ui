@@ -541,30 +541,27 @@ hr { height: 1px; border-width: 0; }
                         </property>
                         <layout class="QVBoxLayout" name="verticalLayout_6">
                          <item>
-                          <widget class="QTextEdit" name="textEdit">
-                           <property name="maximumSize">
+                          <widget class="QLineEdit" name="mobile_number_entry">
+                           <property name="minimumSize">
                             <size>
-                             <width>16777215</width>
+                             <width>0</width>
                              <height>50</height>
                             </size>
                            </property>
-                           <property name="cursor" stdset="0">
-                            <cursorShape>IBeamCursor</cursorShape>
-                           </property>
                            <property name="styleSheet">
-                            <string notr="true">QTextEdit{
+                            <string notr="true">QLineEdit{
 background-color: rgb(138, 174, 146);
 color: rgb(255, 255, 255);
 }
 
-QTextEdit:focus{
+QLineEdit:focus{
 	background-color:rgb(204, 236, 211);
 	border: 2px solid black;
 	color: rgb(0, 0, 0);
 }</string>
                            </property>
-                           <property name="frameShape">
-                            <enum>QFrame::Box</enum>
+                           <property name="placeholderText">
+                            <string>Enter your 10 digit mobile number</string>
                            </property>
                           </widget>
                          </item>
@@ -623,30 +620,27 @@ hr { height: 1px; border-width: 0; }
                         </property>
                         <layout class="QVBoxLayout" name="verticalLayout_7">
                          <item>
-                          <widget class="QTextEdit" name="textEdit_3">
-                           <property name="maximumSize">
+                          <widget class="QLineEdit" name="email_entry">
+                           <property name="minimumSize">
                             <size>
-                             <width>16777215</width>
+                             <width>0</width>
                              <height>50</height>
                             </size>
                            </property>
-                           <property name="cursor" stdset="0">
-                            <cursorShape>IBeamCursor</cursorShape>
-                           </property>
                            <property name="styleSheet">
-                            <string notr="true">QTextEdit{
+                            <string notr="true">QLineEdit{
 background-color: rgb(138, 174, 146);
 color: rgb(255, 255, 255);
 }
 
-QTextEdit:focus{
+QLineEdit:focus{
 	background-color:rgb(204, 236, 211);
 	border: 2px solid black;
 	color: rgb(0, 0, 0);
 }</string>
                            </property>
-                           <property name="frameShape">
-                            <enum>QFrame::Box</enum>
+                           <property name="placeholderText">
+                            <string> Enter your email-id</string>
                            </property>
                           </widget>
                          </item>
@@ -711,30 +705,36 @@ hr { height: 1px; border-width: 0; }
                         </property>
                         <layout class="QHBoxLayout" name="horizontalLayout_7">
                          <item>
-                          <widget class="QTextEdit" name="textEdit_2">
-                           <property name="maximumSize">
+                          <widget class="QLineEdit" name="password_entry">
+                           <property name="minimumSize">
                             <size>
-                             <width>16777215</width>
+                             <width>0</width>
                              <height>50</height>
                             </size>
                            </property>
-                           <property name="cursor" stdset="0">
-                            <cursorShape>IBeamCursor</cursorShape>
-                           </property>
                            <property name="styleSheet">
-                            <string notr="true">QTextEdit{
+                            <string notr="true">QLineEdit{
 background-color: rgb(138, 174, 146);
 color: rgb(255, 255, 255);
 }
 
-QTextEdit:focus{
+QLineEdit:focus{
 	background-color:rgb(204, 236, 211);
 	border: 2px solid black;
 	color: rgb(0, 0, 0);
 }</string>
                            </property>
-                           <property name="frameShape">
-                            <enum>QFrame::Box</enum>
+                           <property name="echoMode">
+                            <enum>QLineEdit::Password</enum>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>  Enter your password</string>
+                           </property>
+                           <property name="clearButtonEnabled">
+                            <bool>false</bool>
                            </property>
                           </widget>
                          </item>
@@ -763,7 +763,7 @@ QTextEdit:focus{
                      </property>
                      <layout class="QVBoxLayout" name="verticalLayout_9">
                       <item>
-                       <widget class="QPushButton" name="pushButton_3">
+                       <widget class="QPushButton" name="Register_Submit_Button">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
