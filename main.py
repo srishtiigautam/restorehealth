@@ -1,8 +1,11 @@
 import os
 import sys
+import hashlib
+import mysql.connector as mc
 from PyQt5 import QtWidgets,uic
 from PyQt5 import QtGui
-from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QPushButton, QFrame, QStackedWidget, QVBoxLayout, QWidget, QFileDialog, QGridLayout
+from PyQt5.QtWidgets import *
+
 
 # screen1 -> home window
 # screen2 -> register
@@ -30,11 +33,13 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QPushButton, QFra
 #button11 -> Notification
 #button12 -> 
 #----------------------------------------
+
 class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow,self).__init__()
         uic.loadUi("./home_window.ui",self)
 
+           
         self.button1 = self.findChild(QPushButton, "Register_Button")
         self.button1.clicked.connect(self.register_call)
 
@@ -150,6 +155,9 @@ class RegisterWindow(QMainWindow):
         self.button26 = self.findChild(QPushButton,"Contact_button")
         self.button26.clicked.connect(self.contact_call)
 
+        self.button27 = self.findChild(QPushButton, "Register_Submit_Button")
+        self.button27.clicked.connect(self.register_submit_action)
+
     def home_call(self):
         screen1 = HomeWindow()
         widget.addWidget(screen1)
@@ -164,6 +172,23 @@ class RegisterWindow(QMainWindow):
         screen5 = ContactWindow()
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+ 
+    def register_submit_action(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        email = self.findChild(QLineEdit,"email_entry").text()
+        password = self.findChild(QLineEdit,"password_entry").text()         
+        mobile = self.findChild(QLineEdit,"mobile_number_entry").text()
+        
+        query = "INSERT INTO PATIENT_DATA(email,mobile,password) values(%s,%s,%s)"
+        value = (email,mobile,password)
+        mycursor.execute(query, value)
+        mydb.commit()
+        print("Data Inserted")
+
+        
+        
 
 #---------------------------------------------
 #               LOGIN WINDOW
@@ -394,6 +419,7 @@ class Mental_health_window(QMainWindow):
         widget.addWidget(screen2)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
+        
 app = QApplication(sys.argv)
 widget = QStackedWidget()
 mainwindow = HomeWindow()
