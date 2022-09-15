@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
-    <height>937</height>
+    <width>1069</width>
+    <height>2111</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -420,11 +420,11 @@ background-color: rgb(220, 255, 228);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>836</width>
-               <height>1598</height>
+               <width>909</width>
+               <height>1930</height>
               </rect>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_20">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
               <item>
                <widget class="QFrame" name="frame_13">
                 <property name="minimumSize">
@@ -1591,6 +1591,94 @@ background-color: rgb(220, 255, 228);
                     </item>
                    </layout>
                   </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_51">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_24">
+                 <item>
+                  <widget class="QPushButton" name="Submit_button">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift Condensed</family>
+                     <pointsize>18</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(90, 113, 94);	
+	color: rgb(204, 236, 211);
+	border-radius:10px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>  Submit  </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="Reset_button">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift Condensed</family>
+                     <pointsize>18</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(90, 113, 94);	
+	color: rgb(204, 236, 211);
+	border-radius:10px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>  Reset  </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>568</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
                  </item>
                 </layout>
                </widget>
