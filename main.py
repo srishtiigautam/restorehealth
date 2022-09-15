@@ -158,6 +158,11 @@ class RegisterWindow(QMainWindow):
         self.button27 = self.findChild(QPushButton, "Register_Submit_Button")
         self.button27.clicked.connect(self.register_submit_action)
 
+        self.button28 = self.findChild(QPushButton, "login_window_button")
+        self.button28.clicked.connect(self.login_call)
+
+
+
     def home_call(self):
         screen1 = HomeWindow()
         widget.addWidget(screen1)
@@ -173,6 +178,11 @@ class RegisterWindow(QMainWindow):
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
+    def login_call(self):
+        screen4 = LoginWindow()
+        widget.addWidget(screen4)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
  
     def register_submit_action(self):
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
@@ -185,9 +195,8 @@ class RegisterWindow(QMainWindow):
         value = (email,mobile,password)
         mycursor.execute(query, value)
         mydb.commit()
-        print("Data Inserted")
-
-        
+        QMessageBox.about(self,"Sucess!","Data Inserted")
+        self.login_call()       
         
 
 #---------------------------------------------
@@ -199,7 +208,7 @@ class RegisterWindow(QMainWindow):
 #button34 -> consult
 #button35 -> support
 #button36 -> contact
-#button37 -> login-button
+#button37 -> login-submit-button
 #button38 -> register
 #button39 -> notification
 #----------------------------------------------
@@ -217,8 +226,8 @@ class LoginWindow(QMainWindow):
         self.button9 = self.findChild(QPushButton,"Register_Button")
         self.button9.clicked.connect(self.register_call)
 
-        self.button18 = self.findChild(QPushButton,"Login_button")
-        self.button18.clicked.connect(self.patient_info_call)
+        self.button18 = self.findChild(QPushButton,"Login_submit_button")
+        self.button18.clicked.connect(self.login_submit_action)
 
         self.button19 = self.findChild(QPushButton,"Contact_button")
         self.button19.clicked.connect(self.contact_call)
@@ -245,6 +254,20 @@ class LoginWindow(QMainWindow):
         screen6 = Patient_info_Window()
         widget.addWidget(screen6)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def login_submit_action(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        mobile = self.findChild(QLineEdit,"mobile_entry").text()
+        password_entry = self.findChild(QLineEdit,"password_entry").text()
+        
+        mycursor.execute("SELECT password FROM PATIENT_DATA WHERE MOBILE='%s'" %mobile)
+        fetched_password = (mycursor.fetchone())
+        fetched_password = ''.join(fetched_password)
+        if (fetched_password == password_entry):
+            self.patient_info_call()
+        else:
+            QMessageBox.about(self,"Error","Wrong Password!")
 
 #---------------------------------------------
 #               CONSULT WINDOW
