@@ -141,29 +141,33 @@ QPushButton:pressed{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QPushButton" name="pushButton">
-            <property name="minimumSize">
-             <size>
-              <width>72</width>
-              <height>70</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">color:rgb(97, 97, 97);
+         <widget class="QPushButton" name="login_window_button">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>72</width>
+            <height>70</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>72</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(97, 97, 97);
 background-color: rgb(244, 249, 244);
 border-radius:35px;</string>
-            </property>
-            <property name="text">
-             <string>Login</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+          </property>
+          <property name="text">
+           <string>Login</string>
+          </property>
+         </widget>
         </widget>
        </item>
       </layout>
@@ -185,6 +189,12 @@ background-color: rgb(138, 174, 146);</string>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QFrame" name="frame_3">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>100</width>
