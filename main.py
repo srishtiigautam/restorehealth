@@ -12,10 +12,11 @@ from PyQt5.QtWidgets import *
 # screen3 -> about
 # screen4 -> Login window
 # screen5 -> Nutrition_page
-# screen6 -> Patient_info_page
+# screen6 -> Patient_info_display_page
 # screen7 -> Contact_page
 # screen8 -> Mental_health_page
 # screen9 -> Consult_page
+# screen10 -> Patient_info_edit_page
 
 #------------------------------------------
 #             HOME PAGE
@@ -183,20 +184,31 @@ class RegisterWindow(QMainWindow):
         widget.addWidget(screen4)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
- 
+    def patient_id_generator(self):
+        file = open("id_file.txt", "r")
+        old_id = int(file.readline())
+        file.close()
+
+        new_id = old_id+1
+        file = open("id_file.txt","w")
+        file.write(str(new_id))
+        file.close()
+        return new_id
+
+
     def register_submit_action(self):
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
         email = self.findChild(QLineEdit,"email_entry").text()
         password = self.findChild(QLineEdit,"password_entry").text()         
         mobile = self.findChild(QLineEdit,"mobile_number_entry").text()
-        
-        query = "INSERT INTO PATIENT_DATA(email,mobile,password) values(%s,%s,%s)"
-        value = (email,mobile,password)
+        patient_id = self.patient_id_generator()        
+        query = "INSERT INTO PATIENT_DATA(patient_id,email,mobile,password) values(%s,%s,%s,%s)"
+        value = (patient_id,email,mobile,password)
         mycursor.execute(query, value)
         mydb.commit()
         QMessageBox.about(self,"Sucess!","Data Inserted")
-        self.login_call()       
+        self.login_call() 
         
 
 #---------------------------------------------
@@ -250,8 +262,8 @@ class LoginWindow(QMainWindow):
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-    def patient_info_call(self):
-        screen6 = Patient_info_Window()
+    def patient_info_display_call(self,mobile,password):
+        screen6 = Patient_info_display_Window(mobile,password)
         widget.addWidget(screen6)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
@@ -264,8 +276,10 @@ class LoginWindow(QMainWindow):
         mycursor.execute("SELECT password FROM PATIENT_DATA WHERE MOBILE='%s'" %mobile)
         fetched_password = (mycursor.fetchone())
         fetched_password = ''.join(fetched_password)
+        mydb.commit()
         if (fetched_password == password_entry):
-            self.patient_info_call()
+            self.patient_info_display_call(mobile,password_entry)
+            
         else:
             QMessageBox.about(self,"Error","Wrong Password!")
 
@@ -311,10 +325,19 @@ class ConsultWindow(QMainWindow):
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-#button11 -> home
-#button12 -> about
-#button13 -> register
-#button17 -> contact
+#---------------------------------------------
+#               NUTRITION WINDOW
+#---------------------------------------------
+# button51 -> home_button
+# button52 -> about_button
+# button53 -> analytics_button
+# button54 -> support_button
+# button55 -> contact_button
+# button56 -> yes_button
+# button57 -> no_button
+# button58 ->
+# button59 ->
+#---------------------------------------------
 
 class NutritionWindow(QMainWindow):
     def __init__(self):
@@ -350,22 +373,38 @@ class NutritionWindow(QMainWindow):
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-#button14 -> home
-#button15 -> about
-#button16 -> contact
-class Patient_info_Window(QMainWindow):
-    def __init__(self):
-        super(Patient_info_Window, self).__init__()
-        uic.loadUi("./Patient_info_page.ui", self)
+#---------------------------------------------
+#               PATIENT_INFO_DISPLAY WINDOW
+#---------------------------------------------
+# button61 -> home_button
+# button62 -> about_button
+# button63 -> analytics_button
+# button64 -> support_button
+# button65 -> contact_button
+# button66 -> edit_button
+# button67 -> next_button
+# button68 ->
+# button69 ->
+#---------------------------------------------
+class Patient_info_display_Window(QMainWindow):
+    def __init__(self,User_Mobile,User_Password):
+        super(Patient_info_display_Window, self).__init__()
+        uic.loadUi("./Patient_info_display.ui", self)
 
-        self.button14 = self.findChild(QPushButton,"Home_button")
-        self.button14.clicked.connect(self.home_call)
+        self.mobile = User_Mobile
+        self.password = User_Password
 
-        self.button15 = self.findChild(QPushButton, "About_button")
-        self.button15.clicked.connect(self.about_call)
+        self.button61 = self.findChild(QPushButton,"Home_button")
+        self.button61.clicked.connect(self.home_call)
 
-        self.button16 = self.findChild(QPushButton, "Contact_button")
-        self.button16.clicked.connect(self.contact_call)
+        self.button62 = self.findChild(QPushButton, "About_button")
+        self.button62.clicked.connect(self.about_call)
+
+        self.button65 = self.findChild(QPushButton, "Contact_button")
+        self.button65.clicked.connect(self.contact_call)
+
+        self.button66 = self.findChild(QPushButton, "Edit_button")
+        self.button66.clicked.connect(self.patient_info_edit_call)
 
     def home_call(self):
         screen1 = HomeWindow()
@@ -379,6 +418,71 @@ class Patient_info_Window(QMainWindow):
         screen5 = ContactWindow()
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def patient_info_edit_call(self):
+        screen10 = Patient_info_edit_Window(self.mobile,self.password)
+        widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+
+#---------------------------------------------
+#               PATIENT_INFO_EDIT WINDOW
+#---------------------------------------------
+# button71 -> home_button
+# button72 -> about_button
+# button73 -> analytics_button
+# button74 -> support_button
+# button75 -> contact_button
+# button76 -> submit_button
+# button77 -> reset_button
+# button78 -> next_button
+# button79 ->
+#---------------------------------------------
+class Patient_info_edit_Window(QMainWindow):
+    def __init__(self,User_Mobile,User_Password):
+        super(Patient_info_edit_Window, self).__init__()
+        uic.loadUi("./Patient_info_edit.ui",self)
+        self.password = User_Password
+        self.mobile = User_Mobile
+
+        self.button76 = self.findChild(QPushButton, "Save_button")
+        self.button76.clicked.connect(self.submit_action)
+
+        self.button71 = self.findChild(QPushButton, "Home_button")
+        self.button71.clicked.connect(self.home_call)
+
+        self.button72 = self.findChild(QPushButton, "About_button")
+        self.button72.clicked.connect(self.about_call)
+
+
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def submit_action(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        name = self.findChild(QLineEdit, "Name_Entry").text()
+        dob = self.findChild(QDateEdit,"DOB_Entry").text()
+        sex = self.findChild(QComboBox, "Sex_entry").currentText()
+        height = self.findChild(QLineEdit,"Height_Entry").text()
+        weight = self.findChild(QLineEdit, "Weight_Entry").text()
+        martial_status = self.findChild(QComboBox, "Martial_status_entry").currentText()
+        address = self.findChild(QLineEdit, "Address_Entry").text()
+        mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
+        patient_id = (mycursor.fetchone())
+        patient_id = ''.join(patient_id)
+        query2 = "INSERT INTO PATIENT_PERSONAL_INFO(patient_id,name,dob,sex,height,weight,martial_status,address) values(%s,%s,%s,%s,%s,%s,%s,%s)"
+        value2 = (patient_id,name,dob,sex,height,weight,martial_status,address)
+        mycursor.execute(query2, value2)
+        mydb.commit()
+        QMessageBox.about(self,"Sucess!","Data Inserted")
+
+
+
 #button17 -> home
 #button18 -> about
 class ContactWindow(QMainWindow):
