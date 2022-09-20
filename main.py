@@ -7,6 +7,7 @@ from PyQt5 import QtGui
 from PyQt5.QtWidgets import *
 
 
+
 # screen1 -> home window
 # screen2 -> register
 # screen3 -> about
@@ -405,6 +406,73 @@ class Patient_info_display_Window(QMainWindow):
 
         self.button66 = self.findChild(QPushButton, "Edit_button")
         self.button66.clicked.connect(self.patient_info_edit_call)
+
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
+        self.patient_id = (mycursor.fetchone())
+        self.patient_id = ''.join(self.patient_id)
+        
+        mycursor.execute("SELECT name FROM patient_personal_info WHERE patient_id='%s'" %self.patient_id)
+        self.fetched_name = (mycursor.fetchone())
+        self.fetched_name = ''.join(self.fetched_name)
+        
+        self.id_display = self.findChild(QLabel, "Patient_id_show")
+        self.id_display.setText("   "+self.patient_id)
+
+        self.name_display = self.findChild(QLabel, "Name_show")
+        self.name_display.setText("   "+self.fetched_name)
+
+        mycursor.execute("SELECT dob FROM patient_personal_info WHERE patient_id='%s'" %self.patient_id)
+        self.fetched_dob_tuple = mycursor.fetchone()
+        self.fetched_dob = self.fetched_dob_tuple[0]
+        self.day = self.fetched_dob.strftime("%d")
+        self.month = self.fetched_dob.strftime("%m")
+        self.year = self.fetched_dob.strftime("%Y")
+        self.fetched_dob = self.fetched_dob.strftime("%d/%m/%Y")
+        
+
+        self.dob_display = self.findChild(QLabel, "DOB_show")
+        self.dob_display.setText("   "+self.fetched_dob)
+
+        mycursor.execute("SELECT sex FROM patient_personal_info WHERE patient_id='%s'" %self.patient_id)
+        self.fetched_sex = mycursor.fetchone()
+        self.fetched_sex = ''.join(self.fetched_sex)
+        
+        self.sex_display = self.findChild(QLabel, "Sex_show")
+        self.sex_display.setText("   "+self.fetched_sex)
+
+        mycursor.execute("SELECT height FROM patient_personal_info WHERE patient_id='%s'" %self.patient_id)
+        self.fetched_height = mycursor.fetchone()
+        self.fetched_height = ''.join(self.fetched_height)
+
+        self.height_display = self.findChild(QLabel, "Height_show")
+        self.height_display.setText("   "+self.fetched_height)
+
+
+        mycursor.execute("SELECT weight FROM patient_personal_info WHERE patient_id='%s'" %self.patient_id)
+        self.fetched_weight = mycursor.fetchone()
+        self.fetched_weight = ''.join(self.fetched_weight)
+
+        self.weight_display = self.findChild(QLabel, "Weight_show")
+        self.weight_display.setText("   "+self.fetched_weight)
+
+        mycursor.execute("SELECT martial_status FROM patient_personal_info WHERE patient_id='%s'" %self.patient_id)
+        self.fetched_martial_status = mycursor.fetchone()
+        self.fetched_martial_status = ''.join(self.fetched_martial_status)
+
+        self.martial_status_display = self.findChild(QLabel, "Martial_Status_show")
+        self.martial_status_display.setText("   "+self.fetched_martial_status)
+
+
+        mycursor.execute("SELECT address FROM patient_personal_info WHERE patient_id='%s'" %self.patient_id)
+        self.fetched_address = mycursor.fetchone()
+        self.fetched_address = ''.join(self.fetched_address)
+
+        self.address_display = self.findChild(QLabel, "Address_show")
+        self.address_display.setText("   "+self.fetched_address)
+
+        mydb.commit()
 
     def home_call(self):
         screen1 = HomeWindow()
