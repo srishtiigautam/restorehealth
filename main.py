@@ -17,7 +17,8 @@ from PyQt5.QtWidgets import *
 # screen7 -> Contact_page
 # screen8 -> Mental_health_page
 # screen9 -> Consult_page
-# screen10 -> Patient_info_edit_page
+# screen10 -> Patient_info_edit1_page
+# screen11 -> Patient_info_edit2_page
 
 #------------------------------------------
 #             HOME PAGE
@@ -515,6 +516,9 @@ class Patient_info_edit_Window(QMainWindow):
         self.button76 = self.findChild(QPushButton, "Save_button")
         self.button76.clicked.connect(self.submit_action)
 
+        self.button78 = self.findChild(QPushButton, "Next_Button")
+        self.button78.clicked.connect(self.page2_call)
+
         self.button71 = self.findChild(QPushButton, "Home_button")
         self.button71.clicked.connect(self.home_call)
 
@@ -529,6 +533,10 @@ class Patient_info_edit_Window(QMainWindow):
     def about_call(self):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def page2_call(self):
+        screen11 = Patient_info_edit2_Window(self.mobile,self.password)
+        widget.addWidget(screen11)
         widget.setCurrentIndex(widget.currentIndex()+1)
     def submit_action(self):
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
@@ -551,18 +559,29 @@ class Patient_info_edit_Window(QMainWindow):
 
 
 
-#button17 -> home
-#button18 -> about
+#---------------------------------------------
+#              CONTACT WINDOW
+#---------------------------------------------
+# button81 -> home_button
+# button82 -> about_button
+# button83 -> analytics_button
+# button84 -> support_button
+# button85 -> contact_button
+# button86 -> 
+# button87 -> 
+# button88 -> 
+# button89 ->
+#---------------------------------------------
 class ContactWindow(QMainWindow):
     def __init__(self):
         super(ContactWindow, self).__init__()
         uic.loadUi("./Contact_window.ui", self)
         
-        self.button17 = self.findChild(QPushButton,"Home_Button")
-        self.button17.clicked.connect(self.home_call)
+        self.button81 = self.findChild(QPushButton,"Home_Button")
+        self.button81.clicked.connect(self.home_call)
 
-        self.button18 = self.findChild(QPushButton,"About_Button")
-        self.button18.clicked.connect(self.about_call)
+        self.button82 = self.findChild(QPushButton,"About_Button")
+        self.button82.clicked.connect(self.about_call)
         
     def home_call(self):
         screen1 = HomeWindow()
@@ -573,14 +592,19 @@ class ContactWindow(QMainWindow):
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
-#button22 ->home
-#button23 ->about
-#button24 ->analytics
-#button25 ->consult
-#button26 ->support
-#button27 ->Contact
-#button28 ->register
-
+#---------------------------------------------
+#              MENTAL_HEALTH WINDOW
+#---------------------------------------------
+# button91 -> home_button
+# button92 -> about_button
+# button93 -> analytics_button
+# button94 -> support_button
+# button95 -> contact_button
+# button96 -> 
+# button97 -> 
+# button98 -> 
+# button99 ->
+#---------------------------------------------
 class Mental_health_window(QMainWindow):
     def __init__(self):
         super(Mental_health_window, self).__init__()
@@ -613,6 +637,64 @@ class Mental_health_window(QMainWindow):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+#---------------------------------------------
+#               PATEINT_INFO_EDIT2 WINDOW
+#---------------------------------------------
+# button101 -> home_button
+# button102 -> about_button
+# button103 -> analytics_button
+# button104 -> support_button
+# button105 -> contact_button
+# button106 -> 
+# button107 -> 
+# button108 -> 
+# button109 ->
+#---------------------------------------------
+class Patient_info_edit2_Window(QMainWindow):
+    def __init__(self,User_Mobile,User_Password):
+        super(Patient_info_edit2_Window, self).__init__()
+        uic.loadUi("./Patient_info_edit2.ui",self)
+        self.password = User_Password
+        self.mobile = User_Mobile
+
+        self.button76 = self.findChild(QPushButton, "Save_button")
+        self.button76.clicked.connect(self.submit_action)
+
+        self.button71 = self.findChild(QPushButton, "Home_button")
+        self.button71.clicked.connect(self.home_call)
+
+        self.button72 = self.findChild(QPushButton, "About_button")
+        self.button72.clicked.connect(self.about_call)
+
+
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    # def submit_action(self):
+        # mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        # mycursor = mydb.cursor()
+        # name = self.findChild(QLineEdit, "Name_Entry").text()
+        # dob = self.findChild(QDateEdit,"DOB_Entry").text()
+        # sex = self.findChild(QComboBox, "Sex_entry").currentText()
+        # height = self.findChild(QLineEdit,"Height_Entry").text()
+        # weight = self.findChild(QLineEdit, "Weight_Entry").text()
+        # martial_status = self.findChild(QComboBox, "Martial_status_entry").currentText()
+        # address = self.findChild(QLineEdit, "Address_Entry").text()
+        # mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
+        # patient_id = (mycursor.fetchone())
+        # patient_id = ''.join(patient_id)
+        # query2 = "INSERT INTO PATIENT_PERSONAL_INFO(patient_id,name,dob,sex,height,weight,martial_status,address) values(%s,%s,%s,%s,%s,%s,%s,%s)"
+        # value2 = (patient_id,name,dob,sex,height,weight,martial_status,address)
+        # mycursor.execute(query2, value2)
+        # mydb.commit()
+        # QMessageBox.about(self,"Sucess!","Data Inserted")
 
         
 app = QApplication(sys.argv)
