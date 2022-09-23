@@ -493,7 +493,7 @@ background-color: rgb(220, 255, 228);
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="Name_Entry">
+                 <widget class="QLineEdit" name="HOSIIF">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -546,7 +546,7 @@ background-color:rgb(255, 255, 255)
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="Address_Entry">
+                 <widget class="QLineEdit" name="HOACD">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
