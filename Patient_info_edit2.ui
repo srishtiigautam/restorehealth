@@ -493,7 +493,7 @@ background-color: rgb(220, 255, 228);
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="Name_Entry">
+                 <widget class="QLineEdit" name="SIIP_Entry">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -551,28 +551,26 @@ background-color:rgb(255, 255, 255)
                   </property>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignLeft">
-                 <widget class="QComboBox" name="comboBox">
+                <item>
+                 <widget class="QLineEdit" name="AHOH">
                   <property name="minimumSize">
                    <size>
-                    <width>50</width>
-                    <height>0</height>
+                    <width>0</width>
+                    <height>30</height>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: rgb(204, 236, 211);
-</string>
+                   <string notr="true">QLineEdit{
+background-color: rgb(204, 236, 211);
+border-radius:5px;
+}
+QLineEdit:focus{
+background-color:rgb(255, 255, 255)
+}</string>
                   </property>
-                  <item>
-                   <property name="text">
-                    <string>Yes</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>No</string>
-                   </property>
-                  </item>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
                  </widget>
                 </item>
                </layout>
@@ -613,7 +611,7 @@ background-color:rgb(255, 255, 255)
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="Address_Entry_2">
+                 <widget class="QLineEdit" name="previous_medication_Entry">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -666,7 +664,7 @@ background-color:rgb(255, 255, 255)
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="Address_Entry">
+                 <widget class="QLineEdit" name="AHOS_Entry">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
