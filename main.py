@@ -517,7 +517,7 @@ class Patient_info_edit_Window(QMainWindow):
         self.button76.clicked.connect(self.submit_action)
 
         self.button78 = self.findChild(QPushButton, "Next_Button")
-        self.button78.clicked.connect(self.page2_call)
+        self.button78.clicked.connect(self.next_page_call)
 
         self.button71 = self.findChild(QPushButton, "Home_button")
         self.button71.clicked.connect(self.home_call)
@@ -534,7 +534,7 @@ class Patient_info_edit_Window(QMainWindow):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    def page2_call(self):
+    def next_page_call(self):
         screen11 = Patient_info_edit2_Window(self.mobile,self.password)
         widget.addWidget(screen11)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -646,9 +646,9 @@ class Mental_health_window(QMainWindow):
 # button103 -> analytics_button
 # button104 -> support_button
 # button105 -> contact_button
-# button106 -> 
-# button107 -> 
-# button108 -> 
+# button106 -> previous_button
+# button107 -> next_button
+# button108 -> save_button
 # button109 ->
 #---------------------------------------------
 class Patient_info_edit2_Window(QMainWindow):
@@ -658,16 +658,20 @@ class Patient_info_edit2_Window(QMainWindow):
         self.password = User_Password
         self.mobile = User_Mobile
 
-        self.button76 = self.findChild(QPushButton, "Save_button")
-        self.button76.clicked.connect(self.submit_action)
+        self.button106 = self.findChild(QPushButton, "Previous_Button")
+        self.button106.clicked.connect(self.previous_page_call)
 
-        self.button71 = self.findChild(QPushButton, "Home_button")
-        self.button71.clicked.connect(self.home_call)
+        self.button107 = self.findChild(QPushButton, "Next_Button")
+        self.button107.clicked.connect(self.next_page_call)
 
-        self.button72 = self.findChild(QPushButton, "About_button")
-        self.button72.clicked.connect(self.about_call)
+        self.button108 = self.findChild(QPushButton, "Save_button")
+        self.button108.clicked.connect(self.submit_action)
 
+        self.button101 = self.findChild(QPushButton, "Home_button")
+        self.button101.clicked.connect(self.home_call)
 
+        self.button102 = self.findChild(QPushButton, "About_button")
+        self.button102.clicked.connect(self.about_call)
     def home_call(self):
         screen1 = HomeWindow()
         widget.addWidget(screen1)
@@ -676,26 +680,260 @@ class Patient_info_edit2_Window(QMainWindow):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    
-    # def submit_action(self):
-        # mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
-        # mycursor = mydb.cursor()
-        # name = self.findChild(QLineEdit, "Name_Entry").text()
-        # dob = self.findChild(QDateEdit,"DOB_Entry").text()
-        # sex = self.findChild(QComboBox, "Sex_entry").currentText()
-        # height = self.findChild(QLineEdit,"Height_Entry").text()
-        # weight = self.findChild(QLineEdit, "Weight_Entry").text()
-        # martial_status = self.findChild(QComboBox, "Martial_status_entry").currentText()
-        # address = self.findChild(QLineEdit, "Address_Entry").text()
-        # mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
-        # patient_id = (mycursor.fetchone())
-        # patient_id = ''.join(patient_id)
-        # query2 = "INSERT INTO PATIENT_PERSONAL_INFO(patient_id,name,dob,sex,height,weight,martial_status,address) values(%s,%s,%s,%s,%s,%s,%s,%s)"
-        # value2 = (patient_id,name,dob,sex,height,weight,martial_status,address)
-        # mycursor.execute(query2, value2)
-        # mydb.commit()
-        # QMessageBox.about(self,"Sucess!","Data Inserted")
+    def next_page_call(self):
+        screen11 = Patient_info_edit3_Window(self.mobile,self.password)
+        widget.addWidget(screen11)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def previous_page_call(self):
+        screen10 = Patient_info_edit_Window(self.mobile,self.password)
+        widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    # siip = SIMILAR ILLNESS IN PAST
+    # ahoh = ANY HISTORY OF HOSPITALIZATION
+    # pm = PREVIOUS MEDICATIONS
+    # ahos = ANY HISTORY OF SURGERY
+    def submit_action(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        siip = self.findChild(QLineEdit, "SIIP_Entry").text()
+        ahoh = self.findChild(QLineEdit, "AHOH").text()
+        pm = self.findChild(QLineEdit,"previous_medication_Entry").text()
+        ahos = self.findChild(QLineEdit, "AHOS_Entry").text()
+        
+        mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
+        patient_id = (mycursor.fetchone())
+        patient_id = ''.join(patient_id)
+        query2 = "UPDATE PATIENT_PERSONAL_INFO SET Similar_illness_in_past = %s, Hospitalization_history = %s, Previous_Medication = %s, Any_history_of_surgery = %s WHERE patient_id = %s"
+        value2 = (siip,ahoh,pm,ahos,patient_id)
+        mycursor.execute(query2, value2)
+        mydb.commit()
+        QMessageBox.about(self,"Sucess!","Data Inserted")
 
+#---------------------------------------------
+#               PATEINT_INFO_EDIT3 WINDOW
+#---------------------------------------------
+# button111 -> home_button
+# button112 -> about_button
+# button113 -> analytics_button
+# button114 -> support_button
+# button115 -> contact_button
+# button116 -> previous_button
+# button117 -> next_button
+# button118 -> save_button
+# button119 ->
+#---------------------------------------------
+class Patient_info_edit3_Window(QMainWindow):
+    def __init__(self,User_Mobile,User_Password):
+        super(Patient_info_edit3_Window, self).__init__()
+        uic.loadUi("./Patient_info_edit3.ui",self)
+        self.password = User_Password
+        self.mobile = User_Mobile
+
+        self.button116 = self.findChild(QPushButton, "Previous_Button")
+        self.button116.clicked.connect(self.previous_page_call)
+
+        self.button117 = self.findChild(QPushButton, "Next_Button")
+        self.button117.clicked.connect(self.next_page_call)
+
+        self.button118 = self.findChild(QPushButton, "Save_button")
+        self.button118.clicked.connect(self.submit_action)
+
+        self.button111 = self.findChild(QPushButton, "Home_button")
+        self.button111.clicked.connect(self.home_call)
+
+        self.button112 = self.findChild(QPushButton, "About_button")
+        self.button112.clicked.connect(self.about_call)
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def next_page_call(self):
+        screen11 = Patient_info_edit4_Window(self.mobile,self.password)
+        widget.addWidget(screen11)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def previous_page_call(self):
+        screen10 = Patient_info_edit2_Window(self.mobile,self.password)
+        widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    #hosiif = history of similar illness in family
+    #hoacd = history of any chronic disease
+    def submit_action(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        hosiif = self.findChild(QLineEdit, "HOSIIF").text()
+        hoacd = self.findChild(QLineEdit, "HOACD").text()
+        
+        
+        mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
+        patient_id = (mycursor.fetchone())
+        patient_id = ''.join(patient_id)
+        query2 = "UPDATE PATIENT_PERSONAL_INFO SET History_of_similar_illness_in_family = %s, Chronic_disease_history = %s WHERE patient_id = %s"
+        value2 = (hosiif,hoacd,patient_id)
+        mycursor.execute(query2, value2)
+        mydb.commit()
+        QMessageBox.about(self,"Sucess!","Data Inserted")
+
+#---------------------------------------------
+#               PATEINT_INFO_EDIT4 WINDOW
+#---------------------------------------------
+# button111 -> home_button
+# button112 -> about_button
+# button113 -> analytics_button
+# button114 -> support_button
+# button115 -> contact_button
+# button116 -> previous_button
+# button117 -> next_button
+# button118 -> save_button
+# button119 ->
+#---------------------------------------------
+class Patient_info_edit4_Window(QMainWindow):
+    def __init__(self,User_Mobile,User_Password):
+        super(Patient_info_edit4_Window, self).__init__()
+        uic.loadUi("./Patient_info_edit4.ui",self)
+        self.password = User_Password
+        self.mobile = User_Mobile
+
+        self.button116 = self.findChild(QPushButton, "Previous_Button")
+        self.button116.clicked.connect(self.previous_page_call)        
+
+        self.button118 = self.findChild(QPushButton, "Save_button")
+        self.button118.clicked.connect(self.submit_action)
+
+        self.button117 = self.findChild(QPushButton, "Next_Button")
+        self.button117.clicked.connect(self.next_page_call)
+
+        self.button111 = self.findChild(QPushButton, "Home_button")
+        self.button111.clicked.connect(self.home_call)
+
+        self.button112 = self.findChild(QPushButton, "About_button")
+        self.button112.clicked.connect(self.about_call)
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def next_page_call(self):
+        screen11 = Patient_info_edit5_Window(self.mobile,self.password)
+        widget.addWidget(screen11)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def previous_page_call(self):
+        screen10 = Patient_info_edit3_Window(self.mobile,self.password)
+        widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    # siip = SIMILAR ILLNESS IN PAST
+    # ahoh = ANY HISTORY OF HOSPITALIZATION
+    # pm = PREVIOUS MEDICATIONS
+    # ahos = ANY HISTORY OF SURGERY
+    def submit_action(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        aam = self.findChild(QLineEdit, "AAM").text()
+        ldom = self.findChild(QLineEdit, "LDOM").text()
+        cl = self.findChild(QLineEdit,"CL").text()
+        aomp = self.findChild(QLineEdit, "AOMP").text()
+        
+        mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
+        patient_id = (mycursor.fetchone())
+        patient_id = ''.join(patient_id)
+        query2 = "UPDATE PATIENT_PERSONAL_INFO SET Menage = %s, Last_Mendate = %s, Cycle_length = %s, MenProblem = %s WHERE patient_id = %s"
+        value2 = (aam,ldom,cl,aomp,patient_id)
+        mycursor.execute(query2, value2)
+        mydb.commit()
+        QMessageBox.about(self,"Sucess!","Data Inserted")
+
+class Patient_info_edit5_Window(QMainWindow):
+    def __init__(self,User_Mobile,User_Password):
+        super(Patient_info_edit5_Window, self).__init__()
+        uic.loadUi("./Patient_info_edit5.ui",self)
+        self.password = User_Password
+        self.mobile = User_Mobile
+
+        self.button116 = self.findChild(QPushButton, "Previous_Button")
+        self.button116.clicked.connect(self.previous_page_call)        
+
+        self.button118 = self.findChild(QPushButton, "Save_button")
+        self.button118.clicked.connect(self.submit_action)
+
+        self.button111 = self.findChild(QPushButton, "Home_button")
+        self.button111.clicked.connect(self.home_call)
+
+        self.button112 = self.findChild(QPushButton, "About_button")
+        self.button112.clicked.connect(self.about_call)
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    # def next_page_call(self):
+    #     screen11 = Patient_info_edit2_Window(self.mobile,self.password)
+    #     widget.addWidget(screen11)
+    #     widget.setCurrentIndex(widget.currentIndex()+1)
+    def previous_page_call(self):
+        screen10 = Patient_info_edit4_Window(self.mobile,self.password)
+        widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def check_box_texter(self):
+        print("yes")
+    
+    def submit_action(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+
+        self.tdap_check = self.findChild(QCheckBox, "TDAP")
+        if (self.tdap_check.isChecked()):
+            tdap = "yes"
+        else:
+            tdap = "no"
+
+        self.mmr_check = self.findChild(QCheckBox, "MMR")
+        if (self.mmr_check.isChecked()):
+            mmr = "yes"
+        else:
+            mmr = "no"
+
+        self.hep_b_check = self.findChild(QCheckBox, "HEP_B")
+        if (self.hep_b_check.isChecked()):
+            hep_b = "yes"
+        else:
+            hep_b = "no"
+
+        self.hep_a_check = self.findChild(QCheckBox, "HEP_A")
+        if (self.hep_a_check.isChecked()):
+            hep_a = "yes"
+        else:
+            hep_a = "no"
+
+        self.hpv_check = self.findChild(QCheckBox, "HPV")
+        if (self.hpv_check.isChecked()):
+            hpv = "yes"
+        else:
+            hpv = "no"
+        self.influ_check = self.findChild(QCheckBox, "INFLU")
+        if (self.influ_check.isChecked()):
+            influ = "yes"
+        else:
+            influ = "no"
+        pr = self.findChild(QLineEdit, "Past_Reports_Entry").text()
+                
+        mycursor.execute("SELECT patient_id FROM PATIENT_DATA WHERE MOBILE='%s'" %self.mobile)
+        patient_id = (mycursor.fetchone())
+        patient_id = ''.join(patient_id)
+        query2 = "UPDATE PATIENT_PERSONAL_INFO SET TDAP = %s, MMR = %s, HEPATITIS_B = %s, HEPATITIS_A = %s, HPV = %s, INFLUENZA = %s, ANY_PAST_REPORTS = %s WHERE patient_id = %s"
+        value2 = (tdap,mmr,hep_b,hep_a,hpv,influ,pr,patient_id)
+        mycursor.execute(query2, value2)
+        mydb.commit()
+        QMessageBox.about(self,"Sucess!","Data Inserted")
         
 app = QApplication(sys.argv)
 widget = QStackedWidget()
