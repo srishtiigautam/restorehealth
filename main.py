@@ -1,6 +1,7 @@
 import os
 import sys
 import hashlib
+from turtle import Screen
 import mysql.connector as mc
 from PyQt5 import QtWidgets,uic
 from PyQt5 import QtGui
@@ -27,7 +28,7 @@ from PyQt5.QtWidgets import *
 #----------------------------------------------------------------------------------------------------------
 #button1 -> Register
 #button2 -> About
-#button3 -> Analytics
+#button3 -> Feedback
 #button4 -> Consult
 #button5 -> Support
 #button6 -> Contact
@@ -51,6 +52,9 @@ class HomeWindow(QMainWindow):
         self.button2 = self.findChild(QPushButton, "About_button")
         self.button2.clicked.connect(self.about_call)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         self.button4 = self.findChild(QPushButton, "Consult_button")
         self.button4.clicked.connect(self.consult_call)
         
@@ -62,6 +66,8 @@ class HomeWindow(QMainWindow):
 
         self.button8 = self.findChild(QPushButton,"Mental_health_button")
         self.button8.clicked.connect(self.mental_health_call)
+
+        
     def register_call(self):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
@@ -90,6 +96,11 @@ class HomeWindow(QMainWindow):
     def contact_call(self):
         screen7 = ContactWindow()
         widget.addWidget(screen7)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
 #----------------------------------------
@@ -132,6 +143,11 @@ class AboutWindow(QMainWindow):
         screen5 = ContactWindow()
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+class Feedback_Window(QMainWindow):
+    def __init__(self):
+        super(Feedback_Window, self).__init__()
+        uic.loadUi("./Feedback_window.ui",self)
 
 #---------------------------------------------
 #               REGISTER WINDOW
@@ -342,8 +358,8 @@ class Staff_Logged_in_page(QMainWindow):
         rows = mycursor.execute("SELECT * FROM staff_data")
         data = mycursor.fetchall()
 
-        for row in data:
-            self.addTable(MyConverter(row))
+        # for row in data:
+        #     self.addTable(MyConverter(row))
         
         mycursor.close()
 #---------------------------------------------
@@ -996,10 +1012,6 @@ class Patient_info_edit5_Window(QMainWindow):
         mydb.commit()
         QMessageBox.about(self,"Sucess!","Data Inserted")
 
-class Feedback_Window(QMainWindow):
-    def __init__(self):
-        super(Feedback_Window, self).__init__()
-        uic.loadUi("./Feedback_window.ui",self)
 
 app = QApplication(sys.argv)
 widget = QStackedWidget()
