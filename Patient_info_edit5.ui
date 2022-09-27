@@ -209,6 +209,7 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -241,6 +242,7 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -273,6 +275,7 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -305,6 +308,7 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -332,43 +336,12 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_5">
-            <property name="font">
-             <font>
-              <family>Javanese Text</family>
-              <pointsize>16</pointsize>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-color: rgb(97, 97, 97);
-border-radius:10px;
-}
-
-QPushButton:hover{
-background-color: rgb(220, 255, 228);
-	/*color: rgb(255, 255, 255);*/
-	font: 700 16pt &quot;Constantia&quot;;
-}
-
-
-</string>
-            </property>
-            <property name="text">
-             <string>Support</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="Contact_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -440,6 +413,7 @@ background-color: rgb(220, 255, 228);
                 <font>
                  <family>Bahnschrift Condensed</family>
                  <pointsize>42</pointsize>
+                 <weight>50</weight>
                  <bold>false</bold>
                  <underline>true</underline>
                 </font>
@@ -479,6 +453,7 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -493,6 +468,7 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -507,6 +483,7 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -521,6 +498,7 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -535,6 +513,7 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -549,6 +528,7 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -566,6 +546,7 @@ background-color: rgb(220, 255, 228);
                 <font>
                  <family>Bahnschrift Condensed</family>
                  <pointsize>35</pointsize>
+                 <weight>50</weight>
                  <bold>false</bold>
                  <underline>true</underline>
                 </font>
