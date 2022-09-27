@@ -122,6 +122,9 @@ class AboutWindow(QMainWindow):
         self.button13 = self.findChild(QPushButton, "Home_button")
         self.button13.clicked.connect(self.home_call)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         self.button17 = self.findChild(QPushButton,"Contact_button")
         self.button17.clicked.connect(self.contact_call)
 
@@ -143,12 +146,57 @@ class AboutWindow(QMainWindow):
         screen5 = ContactWindow()
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 class Feedback_Window(QMainWindow):
     def __init__(self):
         super(Feedback_Window, self).__init__()
         uic.loadUi("./Feedback_window.ui",self)
 
+        
+        self.button13 = self.findChild(QPushButton, "Home_Button")
+        self.button13.clicked.connect(self.home_call)
+           
+        self.button1 = self.findChild(QPushButton, "Register_button")
+        self.button1.clicked.connect(self.register_call)
+
+        self.button2 = self.findChild(QPushButton, "About_Button")
+        self.button2.clicked.connect(self.about_call)
+
+        self.button4 = self.findChild(QPushButton, "Consult_Button")
+        self.button4.clicked.connect(self.consult_call)
+        
+        self.button6 = self.findChild(QPushButton,"Contact_button")
+        self.button6.clicked.connect(self.contact_call)
+
+
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def contact_call(self):
+        screen5 = ContactWindow()
+        widget.addWidget(screen5)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def register_call(self):
+        screen2 = RegisterWindow()
+        widget.addWidget(screen2)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def consult_call(self):
+        screen9 = ConsultWindow()
+        widget.addWidget(screen9)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 #---------------------------------------------
 #               REGISTER WINDOW
 #---------------------------------------------
@@ -172,6 +220,9 @@ class RegisterWindow(QMainWindow):
 
         self.button22 = self.findChild(QPushButton, "About_button")
         self.button22.clicked.connect(self.about_call)
+
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
 
         self.button26 = self.findChild(QPushButton,"Contact_button")
         self.button26.clicked.connect(self.contact_call)
@@ -207,6 +258,11 @@ class RegisterWindow(QMainWindow):
     def Patient_info_edit_call(self,mobile,password):
         screen4 = Patient_info_edit_Window(mobile,password)
         widget.addWidget(screen4)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def patient_id_generator(self):
@@ -261,6 +317,9 @@ class LoginWindow(QMainWindow):
         self.button8 = self.findChild(QPushButton,"About_Button")
         self.button8.clicked.connect(self.about_call)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         self.button9 = self.findChild(QPushButton,"Register_Button")
         self.button9.clicked.connect(self.register_call)
 
@@ -284,6 +343,11 @@ class LoginWindow(QMainWindow):
     def register_call(self):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
     
     def contact_call(self):
@@ -352,6 +416,9 @@ class Staff_Logged_in_page(QMainWindow):
         super(Staff_Logged_in_page, self).__init__()
         uic.loadUi("./staff_logged_in.ui", self)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
 
@@ -362,6 +429,11 @@ class Staff_Logged_in_page(QMainWindow):
         #     self.addTable(MyConverter(row))
         
         mycursor.close()
+
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 #---------------------------------------------
 #               CONSULT WINDOW
 #---------------------------------------------
@@ -382,6 +454,9 @@ class ConsultWindow(QMainWindow):
 
         self.button41 = self.findChild(QPushButton,"Home_Button")
         self.button41.clicked.connect(self.home_call)
+
+        self.button3 = self.findChild(QPushButton, "Feedback_Button")
+        self.button3.clicked.connect(self.feedback_call)
         
         self.button42 = self.findChild(QPushButton, "About_Button")
         self.button42.clicked.connect(self.about_call)
@@ -402,6 +477,11 @@ class ConsultWindow(QMainWindow):
     def contact_call(self):
         screen5 = ContactWindow()
         widget.addWidget(screen5)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
 #---------------------------------------------
@@ -425,6 +505,9 @@ class NutritionWindow(QMainWindow):
 
         self.button11 = self.findChild(QPushButton,"Home_Button")
         self.button11.clicked.connect(self.home_call)
+
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
 
         self.button12 = self.findChild(QPushButton, "About_Button")
         self.button12.clicked.connect(self.about_call)
@@ -451,6 +534,10 @@ class NutritionWindow(QMainWindow):
         screen5 = ContactWindow()
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 #---------------------------------------------
 #               PATIENT_INFO_DISPLAY WINDOW
@@ -475,6 +562,9 @@ class Patient_info_display_Window(QMainWindow):
 
         self.button61 = self.findChild(QPushButton,"Home_button")
         self.button61.clicked.connect(self.home_call)
+
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
 
         self.button62 = self.findChild(QPushButton, "About_button")
         self.button62.clicked.connect(self.about_call)
@@ -568,6 +658,10 @@ class Patient_info_display_Window(QMainWindow):
         screen10 = Patient_info_edit_Window(self.mobile,self.password)
         widget.addWidget(screen10)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     
 
 #---------------------------------------------
@@ -592,6 +686,9 @@ class Patient_info_edit_Window(QMainWindow):
 
         self.button76 = self.findChild(QPushButton, "Save_button")
         self.button76.clicked.connect(self.submit_action)
+
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
 
         self.button78 = self.findChild(QPushButton, "Next_Button")
         self.button78.clicked.connect(self.next_page_call)
@@ -633,6 +730,10 @@ class Patient_info_edit_Window(QMainWindow):
         mycursor.execute(query2, value2)
         mydb.commit()
         QMessageBox.about(self,"Sucess!","Data Inserted")
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
 
 
@@ -657,6 +758,9 @@ class ContactWindow(QMainWindow):
         self.button81 = self.findChild(QPushButton,"Home_Button")
         self.button81.clicked.connect(self.home_call)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         self.button82 = self.findChild(QPushButton,"About_Button")
         self.button82.clicked.connect(self.about_call)
         
@@ -667,6 +771,10 @@ class ContactWindow(QMainWindow):
     def about_call(self):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
         
 #---------------------------------------------
@@ -693,6 +801,9 @@ class Mental_health_window(QMainWindow):
         self.button23 = self.findChild(QPushButton,"About_Button")
         self.button23.clicked.connect(self.about_call)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         self.button27 = self.findChild(QPushButton, "Contact_button")
         self.button27.clicked.connect(self.contact_call)
 
@@ -713,6 +824,10 @@ class Mental_health_window(QMainWindow):
     def register_call(self):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
 #---------------------------------------------
@@ -741,6 +856,9 @@ class Patient_info_edit2_Window(QMainWindow):
         self.button107 = self.findChild(QPushButton, "Next_Button")
         self.button107.clicked.connect(self.next_page_call)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         self.button108 = self.findChild(QPushButton, "Save_button")
         self.button108.clicked.connect(self.submit_action)
 
@@ -764,6 +882,10 @@ class Patient_info_edit2_Window(QMainWindow):
     def previous_page_call(self):
         screen10 = Patient_info_edit_Window(self.mobile,self.password)
         widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
     # siip = SIMILAR ILLNESS IN PAST
     # ahoh = ANY HISTORY OF HOSPITALIZATION
@@ -812,6 +934,9 @@ class Patient_info_edit3_Window(QMainWindow):
         self.button117 = self.findChild(QPushButton, "Next_Button")
         self.button117.clicked.connect(self.next_page_call)
 
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
+
         self.button118 = self.findChild(QPushButton, "Save_button")
         self.button118.clicked.connect(self.submit_action)
 
@@ -835,6 +960,10 @@ class Patient_info_edit3_Window(QMainWindow):
     def previous_page_call(self):
         screen10 = Patient_info_edit2_Window(self.mobile,self.password)
         widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
     #hosiif = history of similar illness in family
     #hoacd = history of any chronic disease
@@ -875,7 +1004,10 @@ class Patient_info_edit4_Window(QMainWindow):
         self.mobile = User_Mobile
 
         self.button116 = self.findChild(QPushButton, "Previous_Button")
-        self.button116.clicked.connect(self.previous_page_call)        
+        self.button116.clicked.connect(self.previous_page_call)
+        
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)
 
         self.button118 = self.findChild(QPushButton, "Save_button")
         self.button118.clicked.connect(self.submit_action)
@@ -899,6 +1031,10 @@ class Patient_info_edit4_Window(QMainWindow):
     def next_page_call(self):
         screen11 = Patient_info_edit5_Window(self.mobile,self.password)
         widget.addWidget(screen11)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
     def previous_page_call(self):
         screen10 = Patient_info_edit3_Window(self.mobile,self.password)
@@ -933,7 +1069,10 @@ class Patient_info_edit5_Window(QMainWindow):
         self.mobile = User_Mobile
 
         self.button116 = self.findChild(QPushButton, "Previous_Button")
-        self.button116.clicked.connect(self.previous_page_call)        
+        self.button116.clicked.connect(self.previous_page_call)    
+
+        self.button3 = self.findChild(QPushButton, "Feedback_button")
+        self.button3.clicked.connect(self.feedback_call)    
 
         self.button118 = self.findChild(QPushButton, "Save_button")
         self.button118.clicked.connect(self.submit_action)
@@ -958,6 +1097,10 @@ class Patient_info_edit5_Window(QMainWindow):
     def previous_page_call(self):
         screen10 = Patient_info_edit4_Window(self.mobile,self.password)
         widget.addWidget(screen10)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def feedback_call(self):
+        screen12 = Feedback_Window()
+        widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
     
     def check_box_texter(self):
