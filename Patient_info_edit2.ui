@@ -215,7 +215,6 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -248,7 +247,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -276,12 +274,11 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="Analytics_button">
+           <widget class="QPushButton" name="Feedback_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -314,7 +311,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -347,7 +343,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -380,7 +375,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -452,7 +446,6 @@ background-color: rgb(220, 255, 228);
                 <font>
                  <family>Bahnschrift Condensed</family>
                  <pointsize>42</pointsize>
-                 <weight>50</weight>
                  <bold>false</bold>
                  <underline>true</underline>
                 </font>

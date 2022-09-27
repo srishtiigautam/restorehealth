@@ -285,7 +285,7 @@ QPushButton:pressed{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="Analytics_Button">
+           <widget class="QPushButton" name="Feedback_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -458,7 +458,7 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>975</width>
+               <width>967</width>
                <height>730</height>
               </rect>
              </property>

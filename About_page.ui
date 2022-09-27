@@ -214,7 +214,6 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -247,7 +246,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -267,7 +265,7 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="Feedback_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -304,7 +302,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -337,7 +334,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -370,7 +366,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -410,8 +405,8 @@ background-color: rgb(220, 255, 228);
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>810</width>
-            <height>639</height>
+            <width>806</width>
+            <height>681</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_3">

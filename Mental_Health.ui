@@ -186,6 +186,12 @@ background-color: rgb(138, 174, 146);</string>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QFrame" name="frame_3">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>100</width>
@@ -268,7 +274,7 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="Feedback_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -420,7 +426,7 @@ background-color: rgb(220, 255, 228);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1114</width>
+               <width>1105</width>
                <height>1034</height>
               </rect>
              </property>

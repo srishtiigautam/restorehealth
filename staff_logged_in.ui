@@ -290,7 +290,7 @@ QPushButton:pressed{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="Feedback_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>

@@ -215,7 +215,6 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -253,7 +252,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -287,7 +285,7 @@ QPushButton:pressed{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="Analytics_Button">
+           <widget class="QPushButton" name="Feedback_Button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -330,7 +328,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -355,7 +352,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -394,7 +390,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -453,7 +448,7 @@ QPushButton:pressed{
                <x>0</x>
                <y>0</y>
                <width>791</width>
-               <height>1080</height>
+               <height>1081</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -699,12 +694,12 @@ QTextEdit:focus{
                          </property>
                          <property name="dateTime">
                           <datetime>
-                           <hour>0</hour>
-                           <minute>0</minute>
+                           <hour>5</hour>
+                           <minute>30</minute>
                            <second>0</second>
                            <year>2022</year>
                            <month>3</month>
-                           <day>15</day>
+                           <day>14</day>
                           </datetime>
                          </property>
                          <property name="displayFormat">
@@ -931,12 +926,12 @@ QTextEdit:focus{
                       </property>
                       <property name="dateTime">
                        <datetime>
-                        <hour>0</hour>
-                        <minute>0</minute>
+                        <hour>5</hour>
+                        <minute>30</minute>
                         <second>0</second>
                         <year>2022</year>
                         <month>3</month>
-                        <day>15</day>
+                        <day>14</day>
                        </datetime>
                       </property>
                       <property name="displayFormat">
@@ -1074,7 +1069,6 @@ QTextEdit:focus{
                          <property name="font">
                           <font>
                            <pointsize>12</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                           </font>
                          </property>
