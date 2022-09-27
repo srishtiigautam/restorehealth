@@ -215,6 +215,7 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -252,6 +253,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -328,6 +330,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -352,6 +355,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -390,6 +394,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -448,7 +453,7 @@ QPushButton:pressed{
                <x>0</x>
                <y>0</y>
                <width>791</width>
-               <height>1081</height>
+               <height>1080</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -694,8 +699,8 @@ QTextEdit:focus{
                          </property>
                          <property name="dateTime">
                           <datetime>
-                           <hour>5</hour>
-                           <minute>30</minute>
+                           <hour>0</hour>
+                           <minute>0</minute>
                            <second>0</second>
                            <year>2022</year>
                            <month>3</month>
@@ -740,7 +745,7 @@ QTextEdit:focus{
                           </font>
                          </property>
                          <property name="text">
-                          <string>Daytime phone:</string>
+                          <string>Phone no:</string>
                          </property>
                         </widget>
                        </item>
@@ -821,60 +826,14 @@ QTextEdit:focus{
                         </widget>
                        </item>
                        <item alignment="Qt::AlignLeft">
-                        <widget class="QPushButton" name="yes_button">
-                         <property name="minimumSize">
-                          <size>
-                           <width>100</width>
-                           <height>30</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QPushButton{
-	color:rgb(255, 255, 255);
-	border-radius:10px;
-	background-color: rgb(90, 113, 94);
-}
-
-QPushButton:hover{
-	background-color: rgb(204, 236, 211);
-	color: rgb(97, 97, 97);
-}
-
-QPushButton:pressed{
-	background-color: rgb(116, 147, 123);
-	color:rgb(255, 255, 255);	
-}</string>
-                         </property>
+                        <widget class="QCheckBox" name="checkBox_6">
                          <property name="text">
                           <string>Yes</string>
                          </property>
                         </widget>
                        </item>
                        <item alignment="Qt::AlignLeft">
-                        <widget class="QPushButton" name="no_button">
-                         <property name="minimumSize">
-                          <size>
-                           <width>100</width>
-                           <height>30</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QPushButton{
-	color:rgb(255, 255, 255);
-	border-radius:10px;
-	background-color: rgb(90, 113, 94);
-}
-
-QPushButton:hover{
-	background-color: rgb(204, 236, 211);
-	color: rgb(97, 97, 97);
-}
-
-QPushButton:pressed{
-	background-color: rgb(116, 147, 123);
-	color:rgb(255, 255, 255);	
-}</string>
-                         </property>
+                        <widget class="QCheckBox" name="checkBox_8">
                          <property name="text">
                           <string>No</string>
                          </property>
@@ -972,8 +931,8 @@ QPushButton:pressed{
                       </property>
                       <property name="dateTime">
                        <datetime>
-                        <hour>5</hour>
-                        <minute>30</minute>
+                        <hour>0</hour>
+                        <minute>0</minute>
                         <second>0</second>
                         <year>2022</year>
                         <month>3</month>
@@ -1115,6 +1074,7 @@ QPushButton:pressed{
                          <property name="font">
                           <font>
                            <pointsize>12</pointsize>
+                           <weight>50</weight>
                            <bold>false</bold>
                           </font>
                          </property>

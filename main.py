@@ -24,7 +24,7 @@ from PyQt5.QtWidgets import *
 
 #------------------------------------------
 #             HOME PAGE
-#------------------------------------------
+#----------------------------------------------------------------------------------------------------------
 #button1 -> Register
 #button2 -> About
 #button3 -> Analytics
@@ -37,7 +37,7 @@ from PyQt5.QtWidgets import *
 #button10 -> Health & Fitness
 #button11 -> Notification
 #button12 -> 
-#----------------------------------------
+#---------------------------------------------------------------------------------------------------------
 
 class HomeWindow(QMainWindow):
     def __init__(self):
@@ -182,9 +182,14 @@ class RegisterWindow(QMainWindow):
         screen5 = ContactWindow()
         widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
-
+    
     def login_call(self):
         screen4 = LoginWindow()
+        widget.addWidget(screen4)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def Patient_info_edit_call(self,mobile,password):
+        screen4 = Patient_info_edit_Window(mobile,password)
         widget.addWidget(screen4)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
@@ -212,7 +217,7 @@ class RegisterWindow(QMainWindow):
         mycursor.execute(query, value)
         mydb.commit()
         QMessageBox.about(self,"Sucess!","Data Inserted")
-        self.login_call() 
+        self.Patient_info_edit_call(mobile,password) 
         
 
 #---------------------------------------------
