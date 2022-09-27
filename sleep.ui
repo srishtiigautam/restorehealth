@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1068</width>
-    <height>835</height>
+    <width>1079</width>
+    <height>812</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -58,6 +58,12 @@ border:None;</string>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QFrame" name="frame_7">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -172,6 +178,12 @@ border-radius:35px;</string>
     </item>
     <item>
      <widget class="QFrame" name="frame_2">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 179, 255, 255), stop:1 rgba(255, 255, 255, 255));*/
 
@@ -215,6 +227,7 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -253,6 +266,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -290,6 +304,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -328,6 +343,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -366,6 +382,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -403,6 +420,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -458,8 +476,8 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>975</width>
-               <height>730</height>
+               <width>927</width>
+               <height>737</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -481,11 +499,12 @@ QPushButton:pressed{
                     <font>
                      <family>Bahnschrift</family>
                      <pointsize>22</pointsize>
+                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
                    <property name="text">
-                    <string>FITNESS</string>
+                    <string>SLEEP</string>
                    </property>
                   </widget>
                  </item>
@@ -549,7 +568,7 @@ QPushButton:pressed{
                     <property name="bottomMargin">
                      <number>0</number>
                     </property>
-                    <item alignment="Qt::AlignLeft">
+                    <item>
                      <widget class="QLabel" name="label_2">
                       <property name="minimumSize">
                        <size>
@@ -564,16 +583,7 @@ QPushButton:pressed{
                        </font>
                       </property>
                       <property name="text">
-                       <string>Physical fitness is a state of health and well-being and, more specifically, 
-the ability to perform aspects of sports, occupations and daily activities. 
-Physical fitness is generally achieved through proper nutrition, 
-moderate-vigorous physical exercise,and sufficient rest along with a formal recovery plan.
-
-
-Regular physical activity is proven to help prevent and manage noncommunicable 
-diseases such as heart disease, stroke, diabetes and several cancers. 
-It also helps prevent hypertension, maintain healthy body weight and 
-can improve mental health, quality of life and well-being. </string>
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Good sleep improves your brain performance, mood, and health.Not getting enough quality sleep regularly raises the risk of many diseases and disorders.&lt;/p&gt;&lt;p&gt;These range from heart disease and stroke to obesity and dementia.&lt;/p&gt;&lt;p&gt;Determining the risks posed by insufficient sleep is complicated. Medical conditions are slow to develop and have multiple risk factors connected to them.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RISK ASSESSMENT&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The study results below show that reducing sleep by just two or three hours per night can have dramatic health consequences.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;1. Obesity&lt;/span&gt;—&lt;/p&gt;&lt;p&gt;Several studies have linked insufficient sleep and weight gain. &lt;/p&gt;&lt;p&gt;For example, one study found that people who slept fewer than six hours per night on a regular basis were much more likely to have excess body weight,&lt;/p&gt;&lt;p&gt;while people who slept an average of eight hours per night had the lowest relative body fat of the study group&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                       </property>
                      </widget>
                     </item>
