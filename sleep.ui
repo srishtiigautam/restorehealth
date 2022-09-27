@@ -60,7 +60,6 @@ border:None;</string>
            <widget class="QFrame" name="frame_7">
             <property name="font">
              <font>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -180,7 +179,6 @@ border-radius:35px;</string>
      <widget class="QFrame" name="frame_2">
       <property name="font">
        <font>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -227,7 +225,6 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -266,7 +263,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -304,7 +300,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -343,7 +338,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -382,7 +376,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -420,7 +413,6 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -476,8 +468,8 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>927</width>
-               <height>737</height>
+               <width>1051</width>
+               <height>730</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -499,7 +491,6 @@ QPushButton:pressed{
                     <font>
                      <family>Bahnschrift</family>
                      <pointsize>22</pointsize>
-                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -546,6 +537,12 @@ QPushButton:pressed{
                  </property>
                  <item>
                   <widget class="QFrame" name="frame_18">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>500</height>
+                    </size>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true"/>
                    </property>
@@ -568,7 +565,7 @@ QPushButton:pressed{
                     <property name="bottomMargin">
                      <number>0</number>
                     </property>
-                    <item>
+                    <item alignment="Qt::AlignTop">
                      <widget class="QLabel" name="label_2">
                       <property name="minimumSize">
                        <size>
