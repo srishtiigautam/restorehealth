@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1079</width>
-    <height>812</height>
+    <width>1874</width>
+    <height>1008</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>100</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -60,6 +66,7 @@ border:None;</string>
            <widget class="QFrame" name="frame_7">
             <property name="font">
              <font>
+              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -179,6 +186,7 @@ border-radius:35px;</string>
      <widget class="QFrame" name="frame_2">
       <property name="font">
        <font>
+        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -225,6 +233,7 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -263,6 +272,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -300,6 +310,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -338,6 +349,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -376,6 +388,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -413,6 +426,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -468,8 +482,8 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1041</width>
-               <height>730</height>
+               <width>2452</width>
+               <height>952</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -491,6 +505,7 @@ QPushButton:pressed{
                     <font>
                      <family>Bahnschrift</family>
                      <pointsize>22</pointsize>
+                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -507,7 +522,7 @@ QPushButton:pressed{
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>200</height>
+                  <height>500</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -568,12 +583,12 @@ QPushButton:pressed{
                     <property name="bottomMargin">
                      <number>0</number>
                     </property>
-                    <item alignment="Qt::AlignTop">
+                    <item>
                      <widget class="QLabel" name="label_2">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>100</height>
+                        <height>500</height>
                        </size>
                       </property>
                       <property name="font">
@@ -583,7 +598,7 @@ QPushButton:pressed{
                        </font>
                       </property>
                       <property name="text">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Good sleep improves your brain performance, mood, and health.Not getting enough quality sleep regularly raises the risk of many diseases and disorders.&lt;/p&gt;&lt;p&gt;These range from heart disease and stroke to obesity and dementia.&lt;/p&gt;&lt;p&gt;Determining the risks posed by insufficient sleep is complicated. Medical conditions are slow to develop and have multiple risk factors connected to them.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RISK ASSESSMENT&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The study results below show that reducing sleep by just two or three hours per night can have dramatic health consequences.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;1. Obesity&lt;/span&gt;—&lt;/p&gt;&lt;p&gt;Several studies have linked insufficient sleep and weight gain. &lt;/p&gt;&lt;p&gt;For example, one study found that people who slept fewer than six hours per night on a regular basis were much more likely to have excess body weight,&lt;/p&gt;&lt;p&gt;while people who slept an average of eight hours per night had the lowest relative body fat of the study group&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Good sleep improves your brain performance, mood, and health.Not getting enough quality sleep regularly raises the risk of many diseases and disorders.These range from heart disease and stroke to obesity and dementia.&lt;/p&gt;&lt;p&gt;Determining the risks posed by insufficient sleep is complicated. Medical conditions are slow to develop and have multiple risk factors connected to them&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RISK ASSESSMENT&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The study results below show that reducing sleep by just two or three hours per night can have dramatic health consequences.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;1. Obesity—&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Several studies have linked insufficient sleep and weight gain.&lt;/p&gt;&lt;p&gt;For example, one study found that people who slept fewer than six hours per night on a regular basis were much more likely to have excess body weight,while people who slept an average of eight hours per night had the lowest relative body fat of the study group.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2.Diabetes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Studies have shown that people who reported sleeping fewer than five hours per night had a greatly increased risk of having or developing type 2 diabetes.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;3.Cardiovascular disease and hypertension—&lt;/span&gt;&lt;/p&gt;&lt;p&gt;A recent study found that even modestly reduced sleep (six to seven hours per night) was associated with a greatly increased the risk of coronary artery calcification, a predictor of future myocardial infarction (heart attack) and death due to heart disease.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;4.Immune function-&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Interactions between sleep and the immune system have been well documented. Sleep deprivation increases the levels of many inflammatory mediators, and infections in turn affect the amount and patterns of sleep.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;5.Common Cold –&lt;/span&gt;&lt;/p&gt;&lt;p&gt;In a recent study, people who averaged less than seven hours of sleep a night were about three times more likely to develop cold symptoms than study volunteers who got eight or more hours of sleep when exposed to the cold-causing rhinovirus. In addition, those individuals who got better quality sleep were the least likely to come down with a cold.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                       </property>
                      </widget>
                     </item>
@@ -595,6 +610,12 @@ QPushButton:pressed{
               </item>
               <item>
                <widget class="QFrame" name="frame_12">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
                 <property name="styleSheet">
                  <string notr="true"/>
                 </property>
@@ -604,45 +625,7 @@ QPushButton:pressed{
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_10">
-                 <item>
-                  <widget class="QLabel" name="label_9">
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift</family>
-                     <pointsize>11</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>
-KEY FACTS</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_3">
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift</family>
-                     <pointsize>11</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Physical activity has significant health benefits for hearts, bodies and minds
-
-Physical activity contributes to preventing and managing non communicable diseases such as cardiovascular diseases, cancer and diabetes.
-
-Physical activity reduces symptoms of depression and anxiety
-
-Physical activity enhances thinking, learning, and judgment skills
-
-Physical activity ensures healthy growth and development in young people
-
-Physical activity improves overall well-being</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <layout class="QVBoxLayout" name="verticalLayout_10"/>
                </widget>
               </item>
               <item>
