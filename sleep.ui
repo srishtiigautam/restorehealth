@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1079</width>
-    <height>812</height>
+    <width>1225</width>
+    <height>845</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -469,7 +469,7 @@ QPushButton:pressed{
                <x>0</x>
                <y>0</y>
                <width>1041</width>
-               <height>730</height>
+               <height>1030</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -507,7 +507,7 @@ QPushButton:pressed{
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>200</height>
+                  <height>500</height>
                  </size>
                 </property>
                 <property name="styleSheet">
