@@ -383,44 +383,6 @@ QPushButton:pressed{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="Support_Button">
-            <property name="font">
-             <font>
-              <family>Javanese Text</family>
-              <pointsize>16</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-color: rgb(97, 97, 97);
-border-radius:10px;
-}
-
-QPushButton:hover{
-background-color: rgb(220, 255, 228);
-	/*color: rgb(255, 255, 255);*/
-	font: 700 16pt &quot;Constantia&quot;;
-}
-QPushButton:pressed{
-	color: rgb(0, 0, 32);
-	border-radius:10px;
-	background-color: rgb(138, 174, 146);
-}
-
-
-</string>
-            </property>
-            <property name="text">
-             <string>Support</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="Contact_button">
             <property name="font">
              <font>
@@ -482,8 +444,8 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1041</width>
-               <height>1030</height>
+               <width>2452</width>
+               <height>952</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
