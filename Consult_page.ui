@@ -215,6 +215,7 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -252,6 +253,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -290,6 +292,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -328,6 +331,7 @@ QPushButton:pressed{
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -347,49 +351,12 @@ QPushButton:pressed{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="Support_Button">
-            <property name="font">
-             <font>
-              <family>Javanese Text</family>
-              <pointsize>16</pointsize>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-color: rgb(97, 97, 97);
-border-radius:10px;
-}
-
-QPushButton:hover{
-background-color: rgb(220, 255, 228);
-	/*color: rgb(255, 255, 255);*/
-	font: 700 16pt &quot;Constantia&quot;;
-}
-
-QPushButton:pressed{
-	color: rgb(0, 0, 32);
-	border-radius:10px;
-	background-color: rgb(138, 174, 146);
-}
-
-
-</string>
-            </property>
-            <property name="text">
-             <string>Support</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="Contact_Button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -447,8 +414,8 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>791</width>
-               <height>1081</height>
+               <width>778</width>
+               <height>1063</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -694,8 +661,8 @@ QTextEdit:focus{
                          </property>
                          <property name="dateTime">
                           <datetime>
-                           <hour>5</hour>
-                           <minute>30</minute>
+                           <hour>0</hour>
+                           <minute>0</minute>
                            <second>0</second>
                            <year>2022</year>
                            <month>3</month>
@@ -926,8 +893,8 @@ QTextEdit:focus{
                       </property>
                       <property name="dateTime">
                        <datetime>
-                        <hour>5</hour>
-                        <minute>30</minute>
+                        <hour>0</hour>
+                        <minute>0</minute>
                         <second>0</second>
                         <year>2022</year>
                         <month>3</month>
@@ -1069,6 +1036,7 @@ QTextEdit:focus{
                          <property name="font">
                           <font>
                            <pointsize>12</pointsize>
+                           <weight>50</weight>
                            <bold>false</bold>
                           </font>
                          </property>
