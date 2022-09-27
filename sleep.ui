@@ -295,7 +295,7 @@ QPushButton:pressed{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="Analytics_Button">
+           <widget class="QPushButton" name="Feedback_Button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -328,7 +328,7 @@ QPushButton:pressed{
 </string>
             </property>
             <property name="text">
-             <string>Analytics</string>
+             <string>Feedback</string>
             </property>
            </widget>
           </item>
@@ -468,7 +468,7 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1051</width>
+               <width>1041</width>
                <height>730</height>
               </rect>
              </property>
@@ -559,6 +559,9 @@ QPushButton:pressed{
                     <property name="leftMargin">
                      <number>0</number>
                     </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
                     <property name="rightMargin">
                      <number>0</number>
                     </property>
@@ -585,19 +588,6 @@ QPushButton:pressed{
                      </widget>
                     </item>
                    </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="frame_17">
-                   <property name="styleSheet">
-                    <string notr="true">image: url(:/icons/Fitness_3.jpeg);</string>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
                   </widget>
                  </item>
                 </layout>
