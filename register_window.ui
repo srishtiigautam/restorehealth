@@ -304,7 +304,7 @@ background-color: rgb(220, 255, 228);
 </string>
             </property>
             <property name="text">
-             <string>Analytics</string>
+             <string>Feedback</string>
             </property>
            </widget>
           </item>
@@ -657,7 +657,7 @@ QLineEdit:focus{
                         </layout>
                        </widget>
                       </item>
-                      <item alignment="Qt::AlignLeft">
+                      <item>
                        <widget class="QFrame" name="frame_19">
                         <property name="minimumSize">
                          <size>

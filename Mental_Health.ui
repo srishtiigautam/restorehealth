@@ -295,7 +295,7 @@ background-color: rgb(220, 255, 228);
 </string>
             </property>
             <property name="text">
-             <string>Analytics</string>
+             <string>Feedback</string>
             </property>
            </widget>
           </item>
@@ -419,7 +419,7 @@ background-color: rgb(220, 255, 228);
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-333</y>
+               <y>0</y>
                <width>1114</width>
                <height>1034</height>
               </rect>

@@ -19,6 +19,8 @@ from PyQt5.QtWidgets import *
 # screen9 -> Consult_page
 # screen10 -> Patient_info_edit1_page
 # screen11 -> Patient_info_edit2_page
+# screen12 -> Feedback
+# screen13 -> Staff_Logged_in_page
 
 #------------------------------------------
 #             HOME PAGE
@@ -223,6 +225,7 @@ class RegisterWindow(QMainWindow):
 #button35 -> support
 #button36 -> contact
 #button37 -> login-submit-button
+#button40 -> Login_submit_button3
 #button38 -> register
 #button39 -> notification
 #----------------------------------------------
@@ -240,11 +243,14 @@ class LoginWindow(QMainWindow):
         self.button9 = self.findChild(QPushButton,"Register_Button")
         self.button9.clicked.connect(self.register_call)
 
-        self.button18 = self.findChild(QPushButton,"Login_submit_button")
-        self.button18.clicked.connect(self.login_submit_action)
+        self.button18 = self.findChild(QPushButton,"Login_submit_button_1")
+        self.button18.clicked.connect(self.login_submit_action1)
 
         self.button19 = self.findChild(QPushButton,"Contact_button")
         self.button19.clicked.connect(self.contact_call)
+
+        self.button40 = self.findChild(QPushButton, "Login_submit_button_2")
+        self.button40.clicked.connect(self.login_submit_action2)
 
     def home_call(self):
         screen1 = HomeWindow()
@@ -269,22 +275,72 @@ class LoginWindow(QMainWindow):
         widget.addWidget(screen6)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
-    def login_submit_action(self):
+    def staff_logged_in_page_call(self):
+        screen13 = Staff_Logged_in_page()
+        widget.addWidget(screen13)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def login_submit_action1(self):
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
-        mobile = self.findChild(QLineEdit,"mobile_entry").text()
-        password_entry = self.findChild(QLineEdit,"password_entry").text()
+        mobile1 = self.findChild(QLineEdit,"mobile_entry_1").text()
+        password_entry1 = self.findChild(QLineEdit,"password_entry_1").text()
         
-        mycursor.execute("SELECT password FROM PATIENT_DATA WHERE MOBILE='%s'" %mobile)
-        fetched_password = (mycursor.fetchone())
-        fetched_password = ''.join(fetched_password)
+        mycursor.execute("SELECT password FROM PATIENT_DATA WHERE MOBILE='%s'" %mobile1)
+        fetched_password1 = (mycursor.fetchone())
+        fetched_password1 = ''.join(fetched_password1)
         mydb.commit()
-        if (fetched_password == password_entry):
-            self.patient_info_display_call(mobile,password_entry)
-            
+        if (fetched_password1 == password_entry1):
+            self.patient_info_display_call(mobile1,password_entry1)            
         else:
             QMessageBox.about(self,"Error","Wrong Password!")
+    def login_submit_action2(self):
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+        staff_id = self.findChild(QLineEdit, "staff_id_entry").text()
+        staff_id = int(staff_id)
+        password_entry2 = self.findChild(QLineEdit, "password_entry_2").text()
 
+        mycursor.execute("SELECT password FROM STAFF_DATA WHERE staff_id={0}" .format(staff_id))
+        fetched_password2 = (mycursor.fetchone())
+        fetched_password2 = ''.join(fetched_password2)
+        mydb.commit()
+        if (fetched_password2 == password_entry2):
+            self.staff_logged_in_page_call()
+        else:
+            QMessageBox.about(self,"Error","Wrong Password!")
+       
+
+
+#---------------------------------------------
+#               STAFF LOGGED IN WINDOW
+#---------------------------------------------
+#button131 -> home
+#button132 -> about
+#button133 -> analytics
+#button134 -> consult
+#button135 -> support
+#button136 -> contact
+#button137 -> login-submit-button
+#button140 -> Login_submit_button3
+#button138 -> register
+#button139 -> notification
+#----------------------------------------------
+class Staff_Logged_in_page(QMainWindow):
+    def __init__(self):
+        super(Staff_Logged_in_page, self).__init__()
+        uic.loadUi("./staff_logged_in.ui", self)
+
+        mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
+        mycursor = mydb.cursor()
+
+        rows = mycursor.execute("SELECT * FROM staff_data")
+        data = mycursor.fetchall()
+
+        for row in data:
+            self.addTable(MyConverter(row))
+        
+        mycursor.close()
 #---------------------------------------------
 #               CONSULT WINDOW
 #---------------------------------------------
@@ -780,15 +836,15 @@ class Patient_info_edit3_Window(QMainWindow):
 #---------------------------------------------
 #               PATEINT_INFO_EDIT4 WINDOW
 #---------------------------------------------
-# button111 -> home_button
-# button112 -> about_button
-# button113 -> analytics_button
-# button114 -> support_button
-# button115 -> contact_button
-# button116 -> previous_button
-# button117 -> next_button
-# button118 -> save_button
-# button119 ->
+# button121 -> home_button
+# button122 -> about_button
+# button123 -> analytics_button
+# button124 -> support_button
+# button125 -> contact_button
+# button126 -> previous_button
+# button127 -> next_button
+# button128 -> save_button
+# button129 ->
 #---------------------------------------------
 class Patient_info_edit4_Window(QMainWindow):
     def __init__(self,User_Mobile,User_Password):
@@ -934,7 +990,12 @@ class Patient_info_edit5_Window(QMainWindow):
         mycursor.execute(query2, value2)
         mydb.commit()
         QMessageBox.about(self,"Sucess!","Data Inserted")
-        
+
+class Feedback_Window(QMainWindow):
+    def __init__(self):
+        super(Feedback_Window, self).__init__()
+        uic.loadUi("./Feedback_window.ui",self)
+
 app = QApplication(sys.argv)
 widget = QStackedWidget()
 mainwindow = HomeWindow()

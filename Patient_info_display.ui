@@ -301,7 +301,7 @@ background-color: rgb(220, 255, 228);
 </string>
             </property>
             <property name="text">
-             <string>Analytics</string>
+             <string>Feedback</string>
             </property>
            </widget>
           </item>
@@ -544,7 +544,7 @@ border-radius:5px;
 }</string>
                    </property>
                    <property name="text">
-                    <string>    </string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -582,7 +582,7 @@ border-radius:5px;
 }</string>
                    </property>
                    <property name="text">
-                    <string>    </string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -647,7 +647,7 @@ border-radius:5px;
 }</string>
                    </property>
                    <property name="text">
-                    <string>    </string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -685,7 +685,7 @@ border-radius:5px;
 }</string>
                    </property>
                    <property name="text">
-                    <string>    </string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -735,7 +735,7 @@ border-radius:5px;
 }</string>
                    </property>
                    <property name="text">
-                    <string>    </string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -823,7 +823,7 @@ border-radius:5px;
 }</string>
                    </property>
                    <property name="text">
-                    <string>    </string>
+                    <string/>
                    </property>
                   </widget>
                  </item>
@@ -855,7 +855,7 @@ border-radius:5px;
 }</string>
                    </property>
                    <property name="text">
-                    <string>   </string>
+                    <string/>
                    </property>
                   </widget>
                  </item>

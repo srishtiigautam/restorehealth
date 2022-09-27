@@ -319,7 +319,7 @@ QPushButton:pressed{
 </string>
             </property>
             <property name="text">
-             <string>Analytics</string>
+             <string>Feedback</string>
             </property>
            </widget>
           </item>

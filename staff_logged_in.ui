@@ -74,7 +74,7 @@ border:None;</string>
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">image: url(Media/Wix Logo Maker - Google Chrome 26-08-2022 16_51_23.png);</string>
+              <string notr="true">image: url(:/icons/Wix Logo Maker - Google Chrome 26-08-2022 16_51_23.png);</string>
              </property>
              <property name="text">
               <string/>
@@ -141,29 +141,33 @@ QPushButton:pressed{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <item>
-           <widget class="QPushButton" name="Login_Button">
-            <property name="minimumSize">
-             <size>
-              <width>72</width>
-              <height>70</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">color:rgb(97, 97, 97);
+         <widget class="QPushButton" name="Register_Button">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>72</width>
+            <height>70</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>72</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(97, 97, 97);
 background-color: rgb(244, 249, 244);
 border-radius:35px;</string>
-            </property>
-            <property name="text">
-             <string>Login</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+          </property>
+          <property name="text">
+           <string>Register</string>
+          </property>
+         </widget>
         </widget>
        </item>
       </layout>
@@ -209,7 +213,7 @@ border-radius:15px;</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QPushButton" name="Home_button">
+           <widget class="QPushButton" name="Home_Button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -231,6 +235,12 @@ background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
 }
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
+}
+
 
 
 </string>
@@ -241,7 +251,7 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="About_Button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -254,10 +264,25 @@ background-color: rgb(220, 255, 228);
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
+color: rgb(97, 97, 97);
+border-radius:10px;
+}
+
+QPushButton:hover{
+background-color: rgb(220, 255, 228);
+	/*color: rgb(255, 255, 255);*/
+	font: 700 16pt &quot;Constantia&quot;;
+}
+QPushButton:pressed{
 	color: rgb(0, 0, 32);
 	border-radius:10px;
 	background-color: rgb(138, 174, 146);
-}</string>
+}
+
+
+
+
+</string>
             </property>
             <property name="text">
              <string>About</string>
@@ -286,6 +311,11 @@ QPushButton:hover{
 background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
+}
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
 }
 
 
@@ -319,6 +349,12 @@ background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
 }
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
+}
+
 
 
 </string>
@@ -351,6 +387,12 @@ background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
 }
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
+}
+
 
 
 </string>
@@ -383,6 +425,12 @@ background-color: rgb(220, 255, 228);
 	/*color: rgb(255, 255, 255);*/
 	font: 700 16pt &quot;Constantia&quot;;
 }
+QPushButton:pressed{
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
+}
+
 
 
 </string>
@@ -396,56 +444,73 @@ background-color: rgb(220, 255, 228);
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_4">
-         <property name="minimumSize">
-          <size>
-           <width>700</width>
-           <height>0</height>
-          </size>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
          </property>
-         <property name="styleSheet">
-          <string notr="true">background:transparent;</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item alignment="Qt::AlignVCenter">
-           <widget class="QFrame" name="frame_9">
-            <property name="minimumSize">
-             <size>
-              <width>300</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-             <item alignment="Qt::AlignVCenter">
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;ABOUT US&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="label">
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Lorem ipsum dolor sit amet, consectetur &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;adipiscing elit, sed do eiusmod tempor &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;incididunt ut labore et dolore magna aliqua. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Ut enim ad minim veniam, quis nostrud &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;exercitation ullamco laboris nisi ut aliquip &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;ex ea commodo consequat. Duis aute irure &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;dolor in reprehenderit in voluptate velit esse &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;cillum dolore eu fugiat nulla pariatur. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Excepteur sint occaecat cupidatat non proident&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>823</width>
+            <height>622</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QTableWidget" name="tableWidget">
+             <property name="styleSheet">
+              <string notr="true">QTableWidget{
+	background-color: rgb(204, 236, 211);
+}</string>
+             </property>
+             <property name="rowCount">
+              <number>8</number>
+             </property>
+             <property name="columnCount">
+              <number>3</number>
+             </property>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <column/>
+             <column/>
+             <column/>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_4">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="text">
+                 <string>PB1</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </widget>
        </item>
       </layout>
@@ -453,7 +518,6 @@ background-color: rgb(220, 255, 228);
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
   <include location="Media/home_page.qrc"/>
