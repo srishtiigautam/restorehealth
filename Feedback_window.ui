@@ -215,7 +215,6 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -248,7 +247,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -281,7 +279,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -290,18 +287,10 @@ background-color: rgb(220, 255, 228);
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-color: rgb(97, 97, 97);
-border-radius:10px;
-}
-
-QPushButton:hover{
-background-color: rgb(220, 255, 228);
-	/*color: rgb(255, 255, 255);*/
-	font: 700 16pt &quot;Constantia&quot;;
-}
-
-
-</string>
+	color: rgb(0, 0, 32);
+	border-radius:10px;
+	background-color: rgb(138, 174, 146);
+}</string>
             </property>
             <property name="text">
              <string>Feedback</string>
@@ -314,7 +303,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -347,7 +335,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -399,8 +386,8 @@ background-color: rgb(220, 255, 228);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>845</width>
-               <height>636</height>
+               <width>858</width>
+               <height>654</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
