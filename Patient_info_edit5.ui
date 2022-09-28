@@ -663,37 +663,6 @@ color: rgb(204, 236, 211);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="Next_Button">
-                     <property name="minimumSize">
-                      <size>
-                       <width>100</width>
-                       <height>30</height>
-                      </size>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <family>Bahnschrift Condensed</family>
-                       <pointsize>14</pointsize>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QPushButton{
-background-color: rgb(204, 236, 211);
-color: rgb(97, 97, 97);
-border-radius:5px;
-}
-
-QPushButton:hover{
-background-color: rgb(90, 113, 94);
-color: rgb(204, 236, 211);
-}</string>
-                     </property>
-                     <property name="text">
-                      <string>  Next  </string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
                     <widget class="QPushButton" name="Reset_Button">
                      <property name="minimumSize">
                       <size>
