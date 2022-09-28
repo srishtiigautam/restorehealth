@@ -420,7 +420,7 @@ background-color: rgb(220, 255, 228);
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">image: url(:/icons/about_4.jpg);</string>
+                 <string notr="true">image: url(Media/about_4.jpg);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -439,7 +439,7 @@ background-color: rgb(220, 255, 228);
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">image: url(:/icons/about_3image.png);</string>
+                 <string notr="true">image: url(Media/about_3image.png);</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
