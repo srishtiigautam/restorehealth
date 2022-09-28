@@ -215,7 +215,6 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -248,7 +247,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -281,7 +279,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -314,7 +311,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -347,7 +343,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -387,8 +382,8 @@ background-color: rgb(220, 255, 228);
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>860</width>
-            <height>1059</height>
+            <width>873</width>
+            <height>1054</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -404,7 +399,6 @@ background-color: rgb(220, 255, 228);
               <font>
                <family>Bahnschrift Condensed</family>
                <pointsize>27</pointsize>
-               <weight>50</weight>
                <bold>false</bold>
                <underline>false</underline>
               </font>
@@ -450,7 +444,76 @@ background-color: rgb(220, 255, 228);
                  <font>
                   <family>Bahnschrift Condensed</family>
                   <pointsize>18</pointsize>
-                  <weight>50</weight>
+                  <bold>false</bold>
+                  <underline>false</underline>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Patient ID:</string>
+                </property>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignLeft">
+               <widget class="QLineEdit" name="Physician_entry">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+background-color: rgb(204, 236, 211);
+border-radius:5px;
+}
+QLineEdit:focus{
+background-color:rgb(255, 255, 255)
+}</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Enter Patient id</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_19">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="maximumSize">
+                 <size>
+                  <width>180</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift Condensed</family>
+                  <pointsize>18</pointsize>
                   <bold>false</bold>
                   <underline>false</underline>
                  </font>
@@ -461,7 +524,7 @@ background-color: rgb(220, 255, 228);
                </widget>
               </item>
               <item alignment="Qt::AlignLeft">
-               <widget class="QLineEdit" name="Physician_entry">
+               <widget class="QLineEdit" name="Physician_entry_2">
                 <property name="minimumSize">
                  <size>
                   <width>400</width>
@@ -521,7 +584,6 @@ background-color:rgb(255, 255, 255)
                  <font>
                   <family>Bahnschrift Condensed</family>
                   <pointsize>18</pointsize>
-                  <weight>50</weight>
                   <bold>false</bold>
                   <underline>false</underline>
                  </font>
@@ -574,7 +636,6 @@ background-color:rgb(255, 255, 255)
                  <font>
                   <family>Bahnschrift Condensed</family>
                   <pointsize>27</pointsize>
-                  <weight>50</weight>
                   <bold>false</bold>
                   <underline>false</underline>
                  </font>
@@ -638,7 +699,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>25</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -654,7 +714,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>25</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -691,7 +750,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -784,7 +842,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -877,7 +934,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -970,7 +1026,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -1081,7 +1136,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>25</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -1097,7 +1151,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>25</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -1134,7 +1187,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -1227,7 +1279,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -1320,7 +1371,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -1413,7 +1463,6 @@ background-color:rgb(255, 255, 255)
                           <font>
                            <family>Bahnschrift Condensed</family>
                            <pointsize>17</pointsize>
-                           <weight>50</weight>
                            <bold>false</bold>
                            <underline>false</underline>
                           </font>
@@ -1503,7 +1552,6 @@ background-color:rgb(255, 255, 255)
                     <font>
                      <family>Bahnschrift Condensed</family>
                      <pointsize>27</pointsize>
-                     <weight>50</weight>
                      <bold>false</bold>
                      <underline>false</underline>
                     </font>

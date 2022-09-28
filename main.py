@@ -342,7 +342,7 @@ class LoginWindow(QMainWindow):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
-        
+
     def register_call(self):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
@@ -433,7 +433,7 @@ class Staff_Logged_in_page(QMainWindow):
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
 
-        rows = mycursor.execute("SELECT * FROM patient_personal_info")
+        rows = mycursor.execute("SELECT patient_id,Name,DOB,Sex,Height,Weight,Address,Martial_status,Previous_Medication FROM patient_personal_info")
         data = mycursor.fetchall()
 
         for row in data:
