@@ -378,8 +378,8 @@ background-color: rgb(220, 255, 228);
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>810</width>
-            <height>639</height>
+            <width>793</width>
+            <height>764</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -428,25 +428,31 @@ background-color: rgb(220, 255, 228);
                 <property name="frameShadow">
                  <enum>QFrame::Raised</enum>
                 </property>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignTop">
-               <widget class="QFrame" name="frame_10">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>200</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">image: url(Media/about_3image.png);</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
+                <widget class="QFrame" name="frame_10">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>400</y>
+                   <width>83</width>
+                   <height>200</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>200</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">image: url(:/icons/about_5.png);</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                </widget>
                </widget>
               </item>
              </layout>
