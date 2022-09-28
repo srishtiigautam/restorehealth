@@ -490,7 +490,28 @@ QPushButton:pressed{
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_3">
+               <widget class="QPushButton" name="Prescription_button">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+background-color: rgb(204, 236, 211);
+color: rgb(97, 97, 97);
+border-radius:10px;
+}
+
+QPushButton:hover{
+	background-color: rgb(220, 255, 228);
+}
+ QPushButton:pressed{
+	background-color: rgb(90, 113, 94);	
+	color: rgb(204, 236, 211);
+}</string>
+                </property>
                 <property name="text">
                  <string>Add prescription</string>
                 </property>
