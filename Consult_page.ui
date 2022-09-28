@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1001</width>
-    <height>1262</height>
+    <width>993</width>
+    <height>1239</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -414,8 +414,8 @@ QPushButton:pressed{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>778</width>
-               <height>1063</height>
+               <width>783</width>
+               <height>1057</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -1061,6 +1061,50 @@ QTextEdit:focus{
                      </widget>
                     </item>
                    </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QFrame" name="frame_3">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(165, 200, 184);
+}
+QPushButton:hover{
+	background-color: rgb(190, 200, 196);
+}
+QPushButton:pressed{
+	background-color: rgb(198, 200, 199);
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>  SUBMIT  </string>
+                   </property>
                   </widget>
                  </item>
                 </layout>
