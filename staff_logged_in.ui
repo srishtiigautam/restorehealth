@@ -300,7 +300,7 @@ QPushButton:pressed{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_7">
+           <widget class="QPushButton" name="Consult_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
@@ -410,7 +410,7 @@ QPushButton:pressed{
               <number>0</number>
              </property>
              <property name="columnCount">
-              <number>10</number>
+              <number>12</number>
              </property>
              <column>
               <property name="text">
@@ -464,7 +464,21 @@ QPushButton:pressed{
                <string>Previous Medication</string>
               </property>
              </column>
-             <column/>
+             <column>
+              <property name="text">
+               <string>New Column</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Similar illness in past</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>History_of_similar_illness_in_family</string>
+              </property>
+             </column>
             </widget>
            </item>
            <item>
