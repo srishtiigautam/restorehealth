@@ -378,15 +378,34 @@ background-color: rgb(220, 255, 228);
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>793</width>
-            <height>764</height>
+            <width>810</width>
+            <height>639</height>
            </rect>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
             <widget class="QLabel" name="label">
              <property name="text">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'proxima_nova_altbold','serif'; font-size:30pt; font-weight:600; color:#333333;&quot;&gt;Who We Are?&lt;/span&gt;&lt;/p&gt;&lt;p&gt;We are believers of change! A change driven by technology and innovation. &lt;/p&gt;&lt;p&gt;We help businesses and individuals in adapting as well as adopting digital &lt;/p&gt;&lt;p&gt;transformation. &lt;/p&gt;&lt;p&gt;Our aim is to change people’s lives and improve businesses with our progressive &lt;/p&gt;&lt;p&gt;and innovative technology solutions .&lt;/p&gt;&lt;p&gt;It was a really great opportunity for us to showcase our ideas on the project of&lt;/p&gt;&lt;p&gt;Electronic Health Record System. Our desktop application, a user friendly and &lt;/p&gt;&lt;p&gt;easy to interact application primary focuses on providing health related solutions&lt;/p&gt;&lt;p&gt;to patients and its consumers.&lt;/p&gt;&lt;p&gt;The aim of our project application is to build a standalone desktop application which&lt;/p&gt;&lt;p&gt;will have the facilities of a modern Electronic Health Record System. Our application&lt;/p&gt;&lt;p&gt;will store the necessary patient details and then from the database we are planning to&lt;/p&gt;&lt;p&gt;fetch the details whenever a search for a particular query is made. Hospital authorities&lt;/p&gt;&lt;p&gt;will easily be able to access information on necessary health related issues like&lt;/p&gt;&lt;p&gt;nutrition and mental health. Our future scope is to enable the user to get appointment&lt;/p&gt;&lt;p&gt;to the doctor in case of a consultancy or an emergency. We also help our clients/patients&lt;/p&gt;&lt;p&gt;to get a detailed information on their past medical history. The application also provides&lt;/p&gt;&lt;p&gt;experimental analysis of previous medical data and reports and comparing them with present&lt;/p&gt;&lt;p&gt;day data. Therefore, it will work as an all-in-one application for all types of health&lt;/p&gt;&lt;p&gt;regarding matter. &lt;/p&gt;&lt;p&gt;Although we have limitations but still will continuously thrive to be better and constantly&lt;/p&gt;&lt;p&gt;be better.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_4">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>300</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-image:url(:/icons/about_image2.jpeg);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
             </widget>
            </item>
