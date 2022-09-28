@@ -1,8 +1,11 @@
 <RCC>
   <qresource prefix="icons">
+    <file>about_3image.png</file>
+    <file>about_3image.png</file>
     <file>about_image2.jpeg</file>
     <file>ABOUT_IMAGE.jpeg</file>
     <file>Fitness_1.jpeg</file>
+    <file>about_4.jpg</file>
     <file>Fitness_2.jpeg</file>
     <file>Fitness_3.jpeg</file>
     <file>Mental_health_1.jpeg</file>
