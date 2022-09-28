@@ -413,6 +413,7 @@ class LoginWindow(QMainWindow):
 #button140 -> Login_submit_button3
 #button138 -> register
 #button139 -> notification
+#button141 -> Prescription_button
 #----------------------------------------------
 class Staff_Logged_in_page(QMainWindow):
     def __init__(self):
@@ -430,6 +431,9 @@ class Staff_Logged_in_page(QMainWindow):
 
         self.button19 = self.findChild(QPushButton,"Contact_button")
         self.button19.clicked.connect(self.contact_call)
+
+        self.button141 = self.findChild(QPushButton, "Prescription_button")
+        self.button141.clicked.connect(self.presc_call)
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
 
@@ -448,6 +452,10 @@ class Staff_Logged_in_page(QMainWindow):
     def about_call(self):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def presc_call(self):
+        screen15 = Prescription_Window()
+        widget.addWidget(screen15)
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def feedback_call(self):
@@ -1023,6 +1031,13 @@ class Patient_info_edit3_Window(QMainWindow):
         mydb.commit()
         QMessageBox.about(self,"Sucess!","Data Inserted")
 
+class Prescription_Window(QMainWindow):
+        def __init__(self):
+            super(Prescription_Window,self).__init__()
+            uic.loadUi("./Prescription_page.ui",self)
+
+            
+
 #---------------------------------------------
 #               PATEINT_INFO_EDIT4 WINDOW
 #---------------------------------------------
@@ -1194,6 +1209,7 @@ class Patient_info_edit5_Window(QMainWindow):
         mycursor.execute(query2, value2)
         mydb.commit()
         QMessageBox.about(self,"Sucess!","Data Inserted")
+
 
 
 app = QApplication(sys.argv)
