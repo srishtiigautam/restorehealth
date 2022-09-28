@@ -1,5 +1,6 @@
 import os
 import sys
+import ast
 import hashlib
 from turtle import Screen
 import mysql.connector as mc
@@ -297,7 +298,7 @@ class RegisterWindow(QMainWindow):
 #---------------------------------------------
 #button31 -> home
 #button32 -> about
-#button33 -> analytics
+#button33 -> feedback
 #button34 -> consult
 #button35 -> support
 #button36 -> contact
@@ -336,10 +337,12 @@ class LoginWindow(QMainWindow):
         screen1 = HomeWindow()
         widget.addWidget(screen1)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
     def about_call(self):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
+        
     def register_call(self):
         screen2 = RegisterWindow()
         widget.addWidget(screen2)
@@ -402,7 +405,7 @@ class LoginWindow(QMainWindow):
 #---------------------------------------------
 #button131 -> home
 #button132 -> about
-#button133 -> analytics
+#button133 -> feedback
 #button134 -> consult
 #button135 -> support
 #button136 -> contact
@@ -416,24 +419,61 @@ class Staff_Logged_in_page(QMainWindow):
         super(Staff_Logged_in_page, self).__init__()
         uic.loadUi("./staff_logged_in.ui", self)
 
+        self.button131 = self.findChild(QPushButton,"Home_Button")
+        self.button131.clicked.connect(self.home_call)
+
+        self.button132 = self.findChild(QPushButton,"About_Button")
+        self.button132.clicked.connect(self.about_call)
+
         self.button3 = self.findChild(QPushButton, "Feedback_button")
         self.button3.clicked.connect(self.feedback_call)
 
+        self.button19 = self.findChild(QPushButton,"Contact_button")
+        self.button19.clicked.connect(self.contact_call)
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
 
-        rows = mycursor.execute("SELECT * FROM staff_data")
+        rows = mycursor.execute("SELECT * FROM patient_personal_info")
         data = mycursor.fetchall()
 
-        # for row in data:
-        #     self.addTable(MyConverter(row))
+        for row in data:
+            self.addTable(self.MyConverter(row))
         
         mycursor.close()
+
+    def home_call(self):
+        screen1 = HomeWindow()
+        widget.addWidget(screen1)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def about_call(self):
+        screen3 = AboutWindow()
+        widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
     def feedback_call(self):
         screen12 = Feedback_Window()
         widget.addWidget(screen12)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def contact_call(self):
+        screen5 = ContactWindow()
+        widget.addWidget(screen5)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def addTable(self, columns):
+        rowPosition = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(rowPosition)
+
+        for i, column in enumerate(columns):
+            self.tableWidget.setItem(rowPosition, i, QtWidgets.QTableWidgetItem(str(column)))
+    def MyConverter(self,mydata):
+        def cvt(data):
+            try: 
+                return ast.literal_eval(data)
+            except Exception:
+                return str(data)
+        return tuple(map(cvt, mydata))
+    
 #---------------------------------------------
 #               CONSULT WINDOW
 #---------------------------------------------
