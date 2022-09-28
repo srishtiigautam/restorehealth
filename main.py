@@ -1145,10 +1145,6 @@ class Patient_info_edit5_Window(QMainWindow):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    # def next_page_call(self):
-    #     screen11 = Patient_info_edit2_Window(self.mobile,self.password)
-    #     widget.addWidget(screen11)
-    #     widget.setCurrentIndex(widget.currentIndex()+1)
     def previous_page_call(self):
         screen10 = Patient_info_edit4_Window(self.mobile,self.password)
         widget.addWidget(screen10)
