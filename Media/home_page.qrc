@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>about_5.png</file>
     <file>about_3image.png</file>
     <file>about_3image.png</file>
     <file>about_image2.jpeg</file>
