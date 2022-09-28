@@ -1036,6 +1036,35 @@ class Prescription_Window(QMainWindow):
             super(Prescription_Window,self).__init__()
             uic.loadUi("./Prescription_page.ui",self)
 
+            self.button111 = self.findChild(QPushButton, "Home_button")
+            self.button111.clicked.connect(self.home_call)
+
+            self.button112 = self.findChild(QPushButton, "About_button")
+            self.button112.clicked.connect(self.about_call)
+
+            self.button3 = self.findChild(QPushButton, "Feedback_button")
+            self.button3.clicked.connect(self.feedback_call)
+
+            self.button4 = self.findChild(QPushButton, "Consult_button")
+            self.button4.clicked.connect(self.consult_call)
+
+        def consult_call(self):
+            screen9 = ConsultWindow()
+            widget.addWidget(screen9)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def home_call(self):
+            screen1 = HomeWindow()
+            widget.addWidget(screen1)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def about_call(self):
+            screen3 = AboutWindow()
+            widget.addWidget(screen3)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def feedback_call(self):
+            screen12 = Feedback_Window()
+            widget.addWidget(screen12)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+
             
 
 #---------------------------------------------
@@ -1145,10 +1174,6 @@ class Patient_info_edit5_Window(QMainWindow):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
         widget.setCurrentIndex(widget.currentIndex()+1)
-    # def next_page_call(self):
-    #     screen11 = Patient_info_edit2_Window(self.mobile,self.password)
-    #     widget.addWidget(screen11)
-    #     widget.setCurrentIndex(widget.currentIndex()+1)
     def previous_page_call(self):
         screen10 = Patient_info_edit4_Window(self.mobile,self.password)
         widget.addWidget(screen10)
