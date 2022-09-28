@@ -186,9 +186,15 @@ background-color: rgb(138, 174, 146);</string>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QFrame" name="frame_3">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>100</width>
+           <width>16777215</width>
            <height>16777215</height>
           </size>
          </property>
@@ -209,7 +215,6 @@ border-radius:15px;</string>
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -242,7 +247,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -270,12 +274,11 @@ background-color: rgb(220, 255, 228);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="Analytics_button">
+           <widget class="QPushButton" name="Feedback_button">
             <property name="font">
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -308,7 +311,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -341,7 +343,6 @@ background-color: rgb(220, 255, 228);
              <font>
               <family>Javanese Text</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -413,7 +414,6 @@ background-color: rgb(220, 255, 228);
                 <font>
                  <family>Bahnschrift Condensed</family>
                  <pointsize>42</pointsize>
-                 <weight>50</weight>
                  <bold>false</bold>
                  <underline>true</underline>
                 </font>
@@ -453,7 +453,6 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -468,7 +467,6 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -483,7 +481,6 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -498,7 +495,6 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -513,7 +509,6 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -528,7 +523,6 @@ background-color: rgb(220, 255, 228);
                    <font>
                     <family>Bahnschrift</family>
                     <pointsize>14</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -546,7 +540,6 @@ background-color: rgb(220, 255, 228);
                 <font>
                  <family>Bahnschrift Condensed</family>
                  <pointsize>35</pointsize>
-                 <weight>50</weight>
                  <bold>false</bold>
                  <underline>true</underline>
                 </font>
