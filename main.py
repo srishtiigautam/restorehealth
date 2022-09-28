@@ -441,14 +441,13 @@ class Staff_Logged_in_page(QMainWindow):
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
 
-        rows = mycursor.execute("SELECT patient_id,Name,DOB,Sex,Height,Weight,Address,Martial_status,Previous_Medication FROM patient_personal_info")
+        rows = mycursor.execute("SELECT patient_id,Name,DOB,Sex,Height,Weight,Address,Martial_status,Previous_Medication,Similar_illness_in_past,Hospitalization_history,History_of_similar_illness_in_family FROM patient_personal_info;")
         data = mycursor.fetchall()
 
         for row in data:
             self.addTable(self.MyConverter(row))
         
         mycursor.close()
-
                
 
     def consult_call(self):
