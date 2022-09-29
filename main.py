@@ -434,16 +434,26 @@ class Staff_Logged_in_page(QMainWindow):
 
         self.button141 = self.findChild(QPushButton, "Prescription_button")
         self.button141.clicked.connect(self.presc_call)
+
+        self.button4 = self.findChild(QPushButton, "Consult_button")
+        self.button4.clicked.connect(self.consult_call)
+        
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
 
-        rows = mycursor.execute("SELECT patient_id,Name,DOB,Sex,Height,Weight,Address,Martial_status,Previous_Medication FROM patient_personal_info")
+        rows = mycursor.execute("SELECT patient_id,Name,DOB,Sex,Height,Weight,Address,Martial_status,Previous_Medication,Similar_illness_in_past,Hospitalization_history,History_of_similar_illness_in_family FROM patient_personal_info;")
         data = mycursor.fetchall()
 
         for row in data:
             self.addTable(self.MyConverter(row))
         
         mycursor.close()
+               
+
+    def consult_call(self):
+        screen9 = ConsultWindow()
+        widget.addWidget(screen9)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
     def home_call(self):
         screen1 = HomeWindow()
@@ -747,6 +757,9 @@ class Patient_info_edit_Window(QMainWindow):
         self.button72 = self.findChild(QPushButton, "About_button")
         self.button72.clicked.connect(self.about_call)
 
+        self.button6 = self.findChild(QPushButton,"Contact_button")
+        self.button6.clicked.connect(self.contact_call)
+
 
     def home_call(self):
         screen1 = HomeWindow()
@@ -993,6 +1006,9 @@ class Patient_info_edit3_Window(QMainWindow):
 
         self.button112 = self.findChild(QPushButton, "About_button")
         self.button112.clicked.connect(self.about_call)
+
+        self.button6 = self.findChild(QPushButton,"Contact_button")
+        self.button6.clicked.connect(self.contact_call)
     def home_call(self):
         screen1 = HomeWindow()
         widget.addWidget(screen1)
@@ -1048,6 +1064,9 @@ class Prescription_Window(QMainWindow):
             self.button4 = self.findChild(QPushButton, "Consult_button")
             self.button4.clicked.connect(self.consult_call)
 
+            self.button6 = self.findChild(QPushButton,"Contact_button")
+            self.button6.clicked.connect(self.contact_call)
+
         def consult_call(self):
             screen9 = ConsultWindow()
             widget.addWidget(screen9)
@@ -1063,6 +1082,10 @@ class Prescription_Window(QMainWindow):
         def feedback_call(self):
             screen12 = Feedback_Window()
             widget.addWidget(screen12)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        def contact_call(self):
+            screen7 = ContactWindow()
+            widget.addWidget(screen7)
             widget.setCurrentIndex(widget.currentIndex()+1)
 
             
@@ -1124,6 +1147,11 @@ class Patient_info_edit4_Window(QMainWindow):
         screen10 = Patient_info_edit3_Window(self.mobile,self.password)
         widget.addWidget(screen10)
         widget.setCurrentIndex(widget.currentIndex()+1)
+
+    def contact_call(self):
+        screen7 = ContactWindow()
+        widget.addWidget(screen7)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     # siip = SIMILAR ILLNESS IN PAST
     # ahoh = ANY HISTORY OF HOSPITALIZATION
     # pm = PREVIOUS MEDICATIONS
@@ -1181,6 +1209,10 @@ class Patient_info_edit5_Window(QMainWindow):
     def feedback_call(self):
         screen12 = Feedback_Window()
         widget.addWidget(screen12)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def contact_call(self):
+        screen7 = ContactWindow()
+        widget.addWidget(screen7)
         widget.setCurrentIndex(widget.currentIndex()+1)
     
     def check_box_texter(self):
