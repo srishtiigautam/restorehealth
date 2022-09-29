@@ -444,7 +444,7 @@ background-color: rgb(220, 255, 228);
                   </size>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">image: url(:/icons/about_5.png);</string>
+                  <string notr="true"/>
                  </property>
                  <property name="frameShape">
                   <enum>QFrame::StyledPanel</enum>
