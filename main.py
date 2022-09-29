@@ -1,8 +1,5 @@
-import os
 import sys
 import ast
-import hashlib
-from turtle import Screen
 import mysql.connector as mc
 from PyQt5 import QtWidgets,uic
 from PyQt5 import QtGui
@@ -773,6 +770,10 @@ class Patient_info_edit_Window(QMainWindow):
         screen11 = Patient_info_edit2_Window(self.mobile,self.password)
         widget.addWidget(screen11)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def contact_call(self):
+        screen5 = ContactWindow()
+        widget.addWidget(screen5)
+        widget.setCurrentIndex(widget.currentIndex()+1)
     def submit_action(self):
         mydb = mc.connect(host="localhost",user="root",password="",database="restore_health")
         mycursor = mydb.cursor()
@@ -932,6 +933,10 @@ class Patient_info_edit2_Window(QMainWindow):
         screen1 = HomeWindow()
         widget.addWidget(screen1)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    def contact_call(self):
+        screen5 = ContactWindow()
+        widget.addWidget(screen5)
+        widget.setCurrentIndex(widget.currentIndex()+1)    
     def about_call(self):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
@@ -1016,6 +1021,10 @@ class Patient_info_edit3_Window(QMainWindow):
     def about_call(self):
         screen3 = AboutWindow()
         widget.addWidget(screen3)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    def contact_call(self):
+        screen5 = ContactWindow()
+        widget.addWidget(screen5)
         widget.setCurrentIndex(widget.currentIndex()+1)
     def next_page_call(self):
         screen11 = Patient_info_edit4_Window(self.mobile,self.password)
