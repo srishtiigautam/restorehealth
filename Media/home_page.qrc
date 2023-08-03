@@ -1,0 +1,29 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>about_5.png</file>
+    <file>about_3image.png</file>
+    <file>about_3image.png</file>
+    <file>about_image2.jpeg</file>
+    <file>ABOUT_IMAGE.jpeg</file>
+    <file>Fitness_1.jpeg</file>
+    <file>about_4.jpg</file>
+    <file>Fitness_2.jpeg</file>
+    <file>Fitness_3.jpeg</file>
+    <file>Mental_health_1.jpeg</file>
+    <file>Mental_health_2.jpeg</file>
+    <file>Mental_health_3.jpeg</file>
+    <file>Mental_health_4.jpeg</file>
+    <file>Nutrition_1.jpeg</file>
+    <file>Nutrition_2.jpeg</file>
+    <file>Nutrition_3.jpeg</file>
+    <file>Nutrition_4.jpeg</file>
+    <file>healh_fitness.jpeg</file>
+    <file>Sleep.jpeg</file>
+    <file>Mental_health.jpeg</file>
+    <file>Nutrition.jpeg</file>
+    <file>Wix Logo Maker - Google Chrome 26-08-2022 16_51_23.png</file>
+    <file>notification (1).png</file>
+    <file>notification (2).png</file>
+    <file>notification.png</file>
+  </qresource>
+</RCC>

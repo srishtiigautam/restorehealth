@@ -1,0 +1,60 @@
+Patient information
+---------------------------------------------------------------------------------------------------------------------
+
+Name:
+Age: 
+Date of birth:
+Sex:
+Height:                Weight:
+Marital status:
+Address:
+
+--------------------------------------------------------------------------------------------------------------------
+History of past illness
+* Similar illness in past:
+* Any history of hospitalisation:
+* Previous medications:
+* Any history of surgery:
+--------------------------------------------------------------------------------------------------------------------
+
+Family history
+
+*History of similar illness in family:
+*History of any chronic disease(Hypertension,DM,Tuberculosis,CVD):
+-------------------------------------------------------------------------------------------------------------------
+Mentrual history(female)
+Age at menarche:
+Last date of menstruation:
+Cycle length:
+Any other mentrual problems:
+
+---------------------------------------------------------------------------------------------------------------------
+Drug allergy(if any):
+
+-------------------------------------------------------------------------------------------------------------------
+Immunizations:
+
+1.TDAP-(checkbox)        3.MMR-(checkbox)             5.Hepatitis B-(checkbox)
+2.HPV-(checkbox)         4.Hepatitis A-(checkbox)     6.Influenza-(checkbox)
+
+ Past Reports(if any):
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+                                   (TO BE FILLED BY STAFF/DOCTOR)
+Refering physician:
+Reason for visit:
+
+Prescription medication
+  Medication        dose/no.per day                               Medication        dose/no.per day
+1.                                                               5.
+2.                                                               6.
+3.                                                               7.
+4.                                                               8.
+
+Any other suggestions:
+
+
+
